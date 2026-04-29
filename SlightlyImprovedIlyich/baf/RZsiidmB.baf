@@ -8,7 +8,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -25,7 +25,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(17)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		HasItem("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
@@ -43,7 +43,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(17)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
@@ -61,7 +61,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(17)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
@@ -79,7 +79,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(17)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
@@ -97,7 +97,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(17)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
@@ -115,7 +115,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(17)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
@@ -286,9 +286,9 @@ IF
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	See(NearestEnemyOf(Myself))
-        OR(10)
+	OR(10)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		CheckStat([PC],7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -299,7 +299,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		CheckStat(SecondNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -310,7 +310,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		CheckStat(ThirdNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -321,7 +321,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		CheckStat(FourthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -332,7 +332,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		CheckStat(FifthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -343,7 +343,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		CheckStat(SixthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -414,7 +414,7 @@ IF
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		CheckStat([PC],7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -424,7 +424,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		CheckStat(SecondNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -434,7 +434,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		CheckStat(ThirdNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -444,7 +444,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		CheckStat(FourthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -454,7 +454,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		CheckStat(FifthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -464,7 +464,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(9)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		CheckStat(SixthNearest([PC]),7,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -556,7 +556,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -574,9 +574,9 @@ IF
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	See(NearestEnemyOf(Myself))
-        OR(13)
+	OR(13)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		StateCheck([PC],STATE_MIRRORIMAGE)
 		CheckStat([PC],1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -590,7 +590,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(13)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		StateCheck(SecondNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(SecondNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -604,7 +604,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(13)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		StateCheck(ThirdNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(ThirdNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -618,7 +618,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(13)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		StateCheck(FourthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(FourthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -632,7 +632,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(13)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		StateCheck(FifthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(FifthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -646,7 +646,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(13)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		StateCheck(SixthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(SixthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -738,7 +738,7 @@ IF
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		StateCheck([PC],STATE_MIRRORIMAGE)
 		CheckStat([PC],1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -751,7 +751,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		StateCheck(SecondNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(SecondNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -764,7 +764,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		StateCheck(ThirdNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(ThirdNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -777,7 +777,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		StateCheck(FourthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(FourthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -790,7 +790,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		StateCheck(FifthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(FifthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -803,7 +803,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		StateCheck(SixthNearest([PC]),STATE_MIRRORIMAGE)
 		CheckStat(SixthNearest([PC]),1,WIZARD_PROTECTION_FROM_ENERGY)
@@ -902,7 +902,7 @@ IF
 	OR(2)
 	     !Range(LastSeenBy(Myself),14)
 	     StateCheck(Myself,STATE_MIRRORIMAGE)
-        !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+	!StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
 	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_ENERGY)
 	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
@@ -922,7 +922,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -939,7 +939,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(11)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
@@ -951,7 +951,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -963,7 +963,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -975,7 +975,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -987,7 +987,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -999,7 +999,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1077,7 +1077,7 @@ IF
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
@@ -1088,7 +1088,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1099,7 +1099,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1110,7 +1110,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1121,7 +1121,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1132,7 +1132,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
@@ -1234,7 +1234,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -1244,7 +1244,7 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	OR(2)
-             HasItem("SCRL1K",Myself)
+		HasItem("SCRL1K",Myself)
 	     HaveSpell(WIZARD_CHROMATIC_ORB)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -1253,7 +1253,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(11)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+        NumCreatureLT([PC],1)
 		!See([PC])
 		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
@@ -1265,7 +1265,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1277,7 +1277,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1289,7 +1289,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1301,7 +1301,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1313,7 +1313,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1391,7 +1391,7 @@ IF
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+        NumCreatureLT([PC],1)
 		!See([PC])
 		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
@@ -1402,7 +1402,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1413,7 +1413,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1424,7 +1424,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1435,7 +1435,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1446,7 +1446,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
@@ -1570,7 +1570,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -1585,9 +1585,9 @@ IF
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	See(NearestEnemyOf(Myself))
-        OR(11)
+	OR(11)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+        NumCreatureLT([PC],1)
 		!See([PC])
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -1598,7 +1598,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1609,7 +1609,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1620,7 +1620,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1631,7 +1631,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1642,7 +1642,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1742,7 +1742,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -1759,7 +1759,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(12)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+        NumCreatureLT([PC],1)
 		!See([PC])
 		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
 		StateCheck([PC],STATE_BLIND)
@@ -1772,7 +1772,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
 		StateCheck(SecondNearest([PC]),STATE_BLIND)
@@ -1785,7 +1785,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
 		StateCheck(ThirdNearest([PC]),STATE_BLIND)
@@ -1798,7 +1798,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
 		StateCheck(FourthNearest([PC]),STATE_BLIND)
@@ -1811,7 +1811,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
 		StateCheck(FifthNearest([PC]),STATE_BLIND)
@@ -1824,7 +1824,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
 		StateCheck(SixthNearest([PC]),STATE_BLIND)
@@ -1940,7 +1940,7 @@ THEN
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -1949,7 +1949,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-        HaveSpell(WIZARD_CHARM_PERSON)
+	HaveSpell(WIZARD_CHARM_PERSON)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1957,7 +1957,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(16)
 		RandomNumGT(20,10)
-                NumCreatureLT([PC],1)
+        NumCreatureLT([PC],1)
 		!See([PC])
 		HasItem("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
@@ -1974,7 +1974,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,11)
-                NumCreatureLT([PC],2)
+        NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
@@ -1991,7 +1991,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,12)
-                NumCreatureLT([PC],3)
+        NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
@@ -2008,7 +2008,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,13)
-                NumCreatureLT([PC],4)
+        NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
@@ -2025,7 +2025,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,14)
-                NumCreatureLT([PC],5)
+        NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
@@ -2042,7 +2042,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,15)
-                NumCreatureLT([PC],6)
+        NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
@@ -2153,7 +2153,7 @@ IF
 		CheckStat(SixthNearest([PC]),2,SCRIPTINGSTATE3)
 		StateCheck(SixthNearest([PC]),RZ_STATE_DISABLED)
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
-         False()
+	False()
 THEN
 	RESPONSE #100
 		Continue()

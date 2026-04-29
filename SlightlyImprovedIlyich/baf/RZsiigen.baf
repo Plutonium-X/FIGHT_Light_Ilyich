@@ -1,16 +1,16 @@
 IF
-        Global("Door06Unlocked","AR0603",1)
-        Global("RZ_See_Enemy","LOCALS",0)
-        Name("Clone1",Myself) // Duergar
-        DifficultyGT(EASY)
+	Global("Door06Unlocked","AR0603",1)
+	Global("RZ_See_Enemy","LOCALS",0)
+	Name("Clone1",Myself) // Duergar
+	DifficultyGT(EASY)
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_See_Enemy","LOCALS",1)
 END
 
 IF
-        Name("Clone1",Myself) // Duergar
-        See([PC])
+	Name("Clone1",Myself) // Duergar
+	See([PC])
 THEN
 	RESPONSE #100
 		StartDialogueNoSet(LastSeenBy(Myself))
@@ -18,18 +18,18 @@ THEN
 END
 
 IF
-        Global("Pedpoly","AR0603",2)
-        Global("Pedfire","AR0603",2)
-        Global("Pedfrost","AR0603",2)
-        Global("Pedlight","AR0603",2)
-        Global("Pedmagm","AR0603",2)
-        Global("Pedsumm","AR0603",2)
-        Global("RZ_See_Enemy","LOCALS",0)
-        OR(3)
-             Name("RZsiiT01",Myself) // Duergar
-             Name("RZsiiT02",Myself) // Duergar
-             Name("RZsiiT03",Myself) // Duergar
-        DifficultyGT(EASY)
+	Global("Pedpoly","AR0603",2)
+	Global("Pedfire","AR0603",2)
+	Global("Pedfrost","AR0603",2)
+	Global("Pedlight","AR0603",2)
+	Global("Pedmagm","AR0603",2)
+	Global("Pedsumm","AR0603",2)
+	Global("RZ_See_Enemy","LOCALS",0)
+	OR(3)
+		Name("RZsiiT01",Myself) // Duergar
+		Name("RZsiiT02",Myself) // Duergar
+		Name("RZsiiT03",Myself) // Duergar
+	DifficultyGT(EASY)
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_See_Enemy","LOCALS",1)
@@ -37,19 +37,19 @@ THEN
 END
 
 IF
-        Global("Pedpoly","AR0603",2)
-        Global("Pedfire","AR0603",2)
-        Global("Pedfrost","AR0603",2)
-        Global("Pedlight","AR0603",2)
-        Global("Pedmagm","AR0603",2)
-        Global("Pedsumm","AR0603",2)
-        OR(3)
-             Name("RZsiiT01",Myself) // Duergar
-             Name("RZsiiT02",Myself) // Duergar
-             Name("RZsiiT03",Myself) // Duergar
-        OR(2)
-             DifficultyLT(NORMAL)
-             See(NearestEnemyOf(Myself))
+	Global("Pedpoly","AR0603",2)
+	Global("Pedfire","AR0603",2)
+	Global("Pedfrost","AR0603",2)
+	Global("Pedlight","AR0603",2)
+	Global("Pedmagm","AR0603",2)
+	Global("Pedsumm","AR0603",2)
+	OR(3)
+		Name("RZsiiT01",Myself) // Duergar
+		Name("RZsiiT02",Myself) // Duergar
+		Name("RZsiiT03",Myself) // Duergar
+	OR(2)
+		DifficultyLT(NORMAL)
+		See(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
 		ChangeAIScript("",OVERRIDE)
@@ -57,8 +57,8 @@ END
 
 IF
 	OR(2)
-	       See(NearestEnemyOf(Myself))
-	       DifficultyLT(NORMAL)
+		See(NearestEnemyOf(Myself))
+		DifficultyLT(NORMAL)
 	OR(3)
 		Name("RZsiiD08",Myself) // Duergar
 		Name("RZsiiD09",Myself) // Duergar
@@ -170,7 +170,7 @@ END
 IF
 	Global("RZ_Patrol","LOCALS",0)
 	Global("RZ_Start_Patrol","MYAREA",1)
-        OR(2)
+	OR(2)
 		See(NearestEnemyOf(Myself))
 		DifficultyLT(NORMAL)
 	OR(4)

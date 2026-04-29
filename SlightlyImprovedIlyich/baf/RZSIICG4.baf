@@ -1,17 +1,17 @@
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -20,10 +20,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -33,9 +33,9 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	OR(18)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -61,7 +61,7 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	!Detect([ENEMY.0.0.THIEF_ALL])
 	!Detect([NEUTRAL.0.0.MAGE_ALL])
@@ -74,18 +74,18 @@ THEN
 END
 
 IF
-  Global("RZ_SII_Golem_Wait","MYAREA",0)
+	Global("RZ_SII_Golem_Wait","MYAREA",0)
 THEN
     RESPONSE #100
 END
 
 IF
-        !RandomNum(21,6)
-        OR(4)
-            See([NEUTRAL.0.0.MAGE_ALL])
-       	    See([ENEMY.0.0.MAGE_ALL])
-	    See([NEUTRAL.0.0.THIEF_ALL])
-	    See([ENEMY.0.0.THIEF_ALL])
+	!RandomNum(21,6)
+	OR(4)
+		See([NEUTRAL.0.0.MAGE_ALL])
+		See([ENEMY.0.0.MAGE_ALL])
+		See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()

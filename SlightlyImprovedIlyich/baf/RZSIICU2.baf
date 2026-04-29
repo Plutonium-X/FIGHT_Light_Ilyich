@@ -2,32 +2,32 @@ IF
 	Die()
 THEN
 	RESPONSE #100
-	        SetGlobal("RZ_SII_Cutscene_2","MYAREA",2) 
+		SetGlobal("RZ_SII_Cutscene_2","MYAREA",2) 
 		ReallyForceSpellDead(Myself,VAMPIRE_GAS_FORM_CHANGE)
 END
 
 IF
-         HPLT(Myself,10)
+	HPLT(Myself,10)
 THEN
 	RESPONSE #100
-	        SetGlobal("RZ_SII_Cutscene_2","MYAREA",2) 
+		SetGlobal("RZ_SII_Cutscene_2","MYAREA",2) 
 		ReallyForceSpellDead(Myself,VAMPIRE_BAT_FORM_CHANGE)
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -36,10 +36,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -78,15 +78,15 @@ THEN
 END
 
 IF
-  Global("RZ_SII_Cutscene_2","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_2","MYAREA",0)
+	Detect([PC])
 THEN
     RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_2","MYAREA",1)
+		SetGlobal("RZ_SII_Cutscene_2","MYAREA",1)
 END
 
 IF
-  Global("RZ_SII_Cutscene_2","MYAREA",0)
+	Global("RZ_SII_Cutscene_2","MYAREA",0)
 THEN
     RESPONSE #100
 END
@@ -101,13 +101,13 @@ END
 
 IF
 	!Allegiance(Myself,ENEMY)
-        Detect([PC])
+	Detect([PC])
 	!Detect([ENEMY.0.0.THIEF_ALL])
-        !Detect([NEUTRAL.0.0.THIEF_ALL])
+	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	Global("StartingDialogue","LOCALS",1)
 THEN
 	RESPONSE #100
-	        Enemy()
+		Enemy()
 		SetGlobal("RZ_See_Enemy","LOCALS",1)
 		ChangeAIScript("RZSIIWAA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
@@ -117,8 +117,8 @@ END
 IF
 	ActionListEmpty()
 	OR(2)
-             See([ENEMY.0.0.THIEF_ALL])
-             See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
+		See([NEUTRAL.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)

@@ -37,19 +37,19 @@ THEN
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -58,10 +58,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -139,7 +139,7 @@ IF
 	!Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
-	         NoAction()
+		NoAction()
 END
 
 IF
@@ -156,38 +156,38 @@ IF
 	Global("RZ_See_Enemy","LOCALS",0)
 THEN
 	RESPONSE #100
-	         RandomWalk()
-        RESPONSE #100
+		RandomWalk()
+	RESPONSE #100
 END
 
 IF
 	OR(2)
-	     Global("RZ_Move_To_Mage","LOCALS",1)
-             Global("RZ_Move_To_PC","LOCALS",1)
-	Or(2)
-             !CheckStat(Player1,0,SANCTUARY)
-	     StateCheck(Player1,STATE_INVISIBLE)
-        Or(3)
-             !CheckStat(Player2,0,SANCTUARY)
-	     StateCheck(Player2,STATE_INVISIBLE)
-	     HPLT(Player2,1)
-        Or(3)
-             !CheckStat(Player3,0,SANCTUARY)
-	     StateCheck(Player3,STATE_INVISIBLE)
-	     HPLT(Player3,1)
-        Or(3)
-             !CheckStat(Player4,0,SANCTUARY)
-	     StateCheck(Player4,STATE_INVISIBLE)
-	     HPLT(Player4,1)
-        Or(3)
-             !CheckStat(Player5,0,SANCTUARY)
-	     StateCheck(Player5,STATE_INVISIBLE)
-	     HPLT(Player5,1)
-        Or(3)
-             !CheckStat(Player6,0,SANCTUARY)
-	     StateCheck(Player6,STATE_INVISIBLE)
-	     HPLT(Player6,1)
-      Allegiance(Myself,ENEMY)
+		Global("RZ_Move_To_Mage","LOCALS",1)
+		Global("RZ_Move_To_PC","LOCALS",1)
+	OR(2)
+		!CheckStat(Player1,0,SANCTUARY)
+		StateCheck(Player1,STATE_INVISIBLE)
+	OR(3)
+		!CheckStat(Player2,0,SANCTUARY)
+		StateCheck(Player2,STATE_INVISIBLE)
+		HPLT(Player2,1)
+	OR(3)
+		!CheckStat(Player3,0,SANCTUARY)
+		StateCheck(Player3,STATE_INVISIBLE)
+		HPLT(Player3,1)
+	OR(3)
+		!CheckStat(Player4,0,SANCTUARY)
+		StateCheck(Player4,STATE_INVISIBLE)
+		HPLT(Player4,1)
+	OR(3)
+		!CheckStat(Player5,0,SANCTUARY)
+		StateCheck(Player5,STATE_INVISIBLE)
+		HPLT(Player5,1)
+	OR(3)
+		!CheckStat(Player6,0,SANCTUARY)
+		StateCheck(Player6,STATE_INVISIBLE)
+		HPLT(Player6,1)
+	Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Move_To_PC","LOCALS",0)
@@ -200,7 +200,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		See([PC.0.0.MAGE_ALL])
-	        See([PC.0.0.BARD_ALL])
+		See([PC.0.0.BARD_ALL])
 	Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
@@ -232,7 +232,7 @@ END
 IF
 	OR(2)
 	Global("RZ_Move_To_Mage","LOCALS",1)
-        Global("RZ_Move_To_PC","LOCALS",1)
+	Global("RZ_Move_To_PC","LOCALS",1)
 THEN
 	RESPONSE #100
 END
@@ -244,10 +244,10 @@ IF
 	NumInPartyGT(0)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player1,MAGE_ALL)
-             Class(Player1,BARD_ALL)
-        Range(Player1,40)
+	OR(2)
+		Class(Player1,MAGE_ALL)
+		Class(Player1,BARD_ALL)
+	Range(Player1,40)
 	!HPLT(Player1,1)
 	CheckStat(Player1,0,SANCTUARY)
 	!StateCheck(Player1,STATE_INVISIBLE)
@@ -266,10 +266,10 @@ IF
 	NumInPartyGT(1)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player2,MAGE_ALL)
-             Class(Player2,BARD_ALL)
-        Range(Player2,40)
+	OR(2)
+		Class(Player2,MAGE_ALL)
+		Class(Player2,BARD_ALL)
+	Range(Player2,40)
 	!HPLT(Player2,1)
 	CheckStat(Player2,0,SANCTUARY)
 	!StateCheck(Player2,STATE_INVISIBLE)
@@ -288,10 +288,10 @@ IF
 	NumInPartyGT(2)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player3,MAGE_ALL)
-             Class(Player3,BARD_ALL)
-        Range(Player3,40)
+	OR(2)
+		Class(Player3,MAGE_ALL)
+		Class(Player3,BARD_ALL)
+	Range(Player3,40)
 	!HPLT(Player3,1)
 	CheckStat(Player3,0,SANCTUARY)
 	!StateCheck(Player3,STATE_INVISIBLE)
@@ -310,10 +310,10 @@ IF
 	NumInPartyGT(3)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player4,MAGE_ALL)
-             Class(Player4,BARD_ALL)
-        Range(Player4,40)
+	OR(2)
+		Class(Player4,MAGE_ALL)
+		Class(Player4,BARD_ALL)
+	Range(Player4,40)
 	!HPLT(Player4,1)
 	CheckStat(Player4,0,SANCTUARY)
 	!StateCheck(Player4,STATE_INVISIBLE)
@@ -332,10 +332,10 @@ IF
 	NumInPartyGT(4)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player5,MAGE_ALL)
-             Class(Player5,BARD_ALL)
-        Range(Player5,40)
+	OR(2)
+		Class(Player5,MAGE_ALL)
+		Class(Player5,BARD_ALL)
+	Range(Player5,40)
 	!HPLT(Player5,1)
 	CheckStat(Player5,0,SANCTUARY)
 	!StateCheck(Player5,STATE_INVISIBLE)
@@ -354,10 +354,10 @@ IF
 	NumInPartyGT(5)
 	!See([PC.0.0.MAGE_ALL])
 	!See([PC.0.0.BARD_ALL])
-        Or(2)
-             Class(Player6,MAGE_ALL)
-             Class(Player6,BARD_ALL)
-        Range(Player5,40)
+	OR(2)
+		Class(Player6,MAGE_ALL)
+		Class(Player6,BARD_ALL)
+	Range(Player5,40)
 	!HPLT(Player6,1)
 	CheckStat(Player6,0,SANCTUARY)
 	!StateCheck(Player6,STATE_INVISIBLE)
@@ -461,30 +461,30 @@ END
 
 IF
 	Global("RZ_Move_To_PC","LOCALS",0)
-        !Global("RZ_See_Enemy","LOCALS",0)
+	!Global("RZ_See_Enemy","LOCALS",0)
 	!See(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
-	         RandomWalk()
+		RandomWalk()
 END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-        !GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,10)
 	Range(NearestEnemyOf(Myself),8)
 THEN
 	RESPONSE #100
-                 EquipMostDamagingMelee()
-	         SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
-	         RunAwayFrom(NearestEnemyOf(Myself),45)
+		EquipMostDamagingMelee()
+		SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
+		RunAwayFrom(NearestEnemyOf(Myself),45)
 END
 
 IF
-        Global("RZ_Ranged","LOCALS",0)
-        !HasItem("BOLT01",Myself)
-        !HasItem("BOLT03",Myself)
+	Global("RZ_Ranged","LOCALS",0)
+	!HasItem("BOLT01",Myself)
+	!HasItem("BOLT03",Myself)
 THEN
 	RESPONSE #100
-              SetGlobal("RZ_Ranged","LOCALS",1)
+		SetGlobal("RZ_Ranged","LOCALS",1)
 END

@@ -1,51 +1,51 @@
 IF
 	OR(2)
-	     Global("RZ_SII_Cutscene_3","MYAREA",2)
+		Global("RZ_SII_Cutscene_3","MYAREA",2)
         !Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	Gender(Myself,FEMALE)
 	!See([PC])
 THEN
 	RESPONSE #100
-	        Enemy()
-                ChangeAIScript("RZSIITHA",OVERRIDE)
+		Enemy()
+		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
 
 IF
 	OR(2)
-	     Global("RZ_SII_Cutscene_3","MYAREA",2)
-             !Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		Global("RZ_SII_Cutscene_3","MYAREA",2)
+		!Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	Gender(Myself,MALE)
 	!See([PC])
 THEN
 	RESPONSE #100
-	        Enemy() 
-                ChangeAIScript("RZSIITHA",OVERRIDE)
+		Enemy() 
+		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATT",CLASS)
 END
 
 IF
-        Global("RZ_Ranged","LOCALS",0)
-        !HasItem("AROW01",Myself)
+	Global("RZ_Ranged","LOCALS",0)
+	!HasItem("AROW01",Myself)
 THEN
 	RESPONSE #100
-              SetGlobal("RZ_Ranged","LOCALS",1)
+		SetGlobal("RZ_Ranged","LOCALS",1)
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -54,10 +54,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -67,11 +67,11 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
-        Gender(Myself,FEMALE)
+	!Allegiance(Myself,ENEMY)
+	Gender(Myself,FEMALE)
 	OR(19)
-                Global("RZ_SII_Cutscene_3","MYAREA",2)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		Global("RZ_SII_Cutscene_3","MYAREA",2)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -105,11 +105,11 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
-        Gender(Myself,MALE)
+	!Allegiance(Myself,ENEMY)
+	Gender(Myself,MALE)
 	OR(19)
-                Global("RZ_SII_Cutscene_3","MYAREA",2)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		Global("RZ_SII_Cutscene_3","MYAREA",2)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -143,24 +143,24 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	!Detect([ENEMY.0.DWARF.FIGHTER_ALL])
 THEN
 	RESPONSE #100
-                 SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
+		SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Detect([PC])
 THEN
     RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
+		SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
 THEN
     RESPONSE #100
 END
@@ -177,10 +177,10 @@ END
 
 IF
 
-        OR(2)
+	OR(2)
         Global("RZ_Can_Melee","LOCALS",0)
         Global("RZ_Ranged","LOCALS",0)
-        !GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,5)
 	!StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
@@ -188,9 +188,9 @@ IF
 	     Range([ENEMY.0.DWARF.FIGHTER_ALL],8)
 THEN
 	RESPONSE #100
-                 EquipMostDamagingMelee()
-	         SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
-	         RunAwayFrom(NearestEnemyOf(Myself),45)
+		EquipMostDamagingMelee()
+		SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
+		RunAwayFrom(NearestEnemyOf(Myself),45)
 END
 
 IF
@@ -230,11 +230,11 @@ THEN
 END
 
 IF
-        Delay(1)
-        Global("RZ_Backstab","LOCALS",1)
-        HaveSpellRES("SPCL423")
-        RandomNumGT(20,10)
-        !CheckStat(Myself,4,SCRIPTINGSTATE4)
+	Delay(1)
+	Global("RZ_Backstab","LOCALS",1)
+	HaveSpellRES("SPCL423")
+	RandomNumGT(20,10)
+	!CheckStat(Myself,4,SCRIPTINGSTATE4)
 	OR(2)
 	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	     See([ENEMY.0.DWARF.FIGHTER_ALL])
@@ -249,8 +249,8 @@ THEN
 END
 
 IF
-        Delay(1)
-        Global("RZ_Backstab","LOCALS",1)
+	Delay(1)
+	Global("RZ_Backstab","LOCALS",1)
 	OR(2)
 	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	     See([ENEMY.0.DWARF.FIGHTER_ALL])
@@ -263,8 +263,8 @@ THEN
 END
 
 IF
-        Global("RZ_Ranged","LOCALS",0)
-        !RandomNum(21,6)
+	Global("RZ_Ranged","LOCALS",0)
+	!RandomNum(21,6)
 	OR(2)
 	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	     See([ENEMY.0.DWARF.FIGHTER_ALL])
@@ -276,7 +276,7 @@ THEN
 END
 
 IF
-        !RandomNum(21,6)
+	!RandomNum(21,6)
 	OR(2)
 	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	     See([ENEMY.0.DWARF.FIGHTER_ALL])

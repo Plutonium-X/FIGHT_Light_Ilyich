@@ -1,6 +1,7 @@
 IF
-  True()
+	True()
 THEN
-    RESPONSE #100
-             DestroySelf()
+	RESPONSE #100
+		DestroySelf()
 END
+

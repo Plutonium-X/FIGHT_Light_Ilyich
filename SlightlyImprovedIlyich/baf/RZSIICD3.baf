@@ -1,27 +1,27 @@
 IF
-  AreaCheck("AR0602")
+	AreaCheck("AR0602")
 THEN
     RESPONSE #100
-            Enemy()
-            ChangeAIScript("RZSIIGEN",OVERRIDE)
-            ChangeAIScript("RZSIIWAA",CLASS)
-            ChangeAIScript("RZSIIATA",RACE)
+		Enemy()
+		ChangeAIScript("RZSIIGEN",OVERRIDE)
+		ChangeAIScript("RZSIIWAA",CLASS)
+		ChangeAIScript("RZSIIATA",RACE)
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -30,10 +30,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -43,9 +43,9 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	OR(18)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -72,7 +72,7 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	!Detect([ENEMY.0.0.THIEF_ALL])
 	See([PC])
@@ -85,7 +85,7 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	!Detect([ENEMY.0.0.THIEF_ALL])
 	!See([PC])
@@ -97,15 +97,15 @@ THEN
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Detect([PC])
 THEN
     RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
+		SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
 THEN
     RESPONSE #100
 END
@@ -121,10 +121,10 @@ THEN
 END
 
 IF
-        !RandomNum(21,6)
-        OR(2)
-	     See([NEUTRAL.0.0.THIEF_ALL])
-	     See([ENEMY.0.0.THIEF_ALL])
+	!RandomNum(21,6)
+	OR(2)
+		See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()

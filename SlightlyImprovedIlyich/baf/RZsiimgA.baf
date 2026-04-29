@@ -1,94 +1,94 @@
 IF
-        Global("RZ_Create_Scroll","LOCALS",0)
-        Or(2)
-             Name("RZsiiT01",Myself)
-             Name("RZsiiT04",Myself)
+	Global("RZ_Create_Scroll","LOCALS",0)
+	OR(2)
+		Name("RZsiiT01",Myself)
+		Name("RZsiiT04",Myself)
 THEN
     RESPONSE #100        
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL7I",Myself,1,1,0)        //death spell
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL7I",Myself,1,1,0)        //death spell
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL7S",Myself,1,1,0)        //chain light
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL7S",Myself,1,1,0)        //chain light
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL8B",Myself,1,1,0)        //nishruu
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL8B",Myself,1,1,0)        //nishruu
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL7W",Myself,1,1,0)        //wyvern call
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL7W",Myself,1,1,0)        //wyvern call
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL7E",Myself,1,1,0)        //inv. stalker
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL7E",Myself,1,1,0)        //inv. stalker
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		Continue()
 END
 
 IF
-        Global("RZ_Create_Scroll","LOCALS",0)
-        Or(2)
-             Name("RZsiiD10",Myself)
-             Name("RZsiiH04",Myself)
+	Global("RZ_Create_Scroll","LOCALS",0)
+	OR(2)
+		Name("RZsiiD10",Myself)
+		Name("RZsiiH04",Myself)
 THEN
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL2B",Myself,1,1,0)        //stoneskin
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL2B",Myself,1,1,0)        //stoneskin
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL6R",Myself,1,1,0)        //spider spawn
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL6R",Myself,1,1,0)        //spider spawn
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL2A",Myself,1,1,0)        //mon. sum. II
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL2A",Myself,1,1,0)        //mon. sum. II
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL5L",Myself,1,1,0)        //polym. other
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL5L",Myself,1,1,0)        //polym. other
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRLA8",Myself,1,1,0)        //contagion
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRLA8",Myself,1,1,0)        //contagion
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		Continue()
 END
 
 IF
-        Global("RZ_Create_Scroll","LOCALS",0)
-        OR(2)
+	Global("RZ_Create_Scroll","LOCALS",0)
+	OR(2)
         Name("RZsiiD05",Myself)
         Name("CLONE1",Myself)
 THEN
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL5P",Myself,1,1,0)        //chaos
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL5P",Myself,1,1,0)        //chaos
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRLAR",Myself,1,1,0)        //sunfire
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRLAR",Myself,1,1,0)        //sunfire
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL2F",Myself,1,1,0)        //cone of cold
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL2F",Myself,1,1,0)        //cone of cold
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL5Q",Myself,1,1,0)        //feeblemind
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL5Q",Myself,1,1,0)        //feeblemind
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             GiveItemCreate("SCRL2G",Myself,1,1,0)        //mon. sum III
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		GiveItemCreate("SCRL2G",Myself,1,1,0)        //mon. sum III
+		Continue()
     RESPONSE #100
-             SetGlobal("RZ_Create_Scroll","LOCALS",1)
-             Continue()
+		SetGlobal("RZ_Create_Scroll","LOCALS",1)
+		Continue()
 END
 
 
@@ -124,11 +124,11 @@ END
 
 IF
 	Global("RZ_Can_Melee","LOCALS",0)
-        !HaveSpell(WIZARD_SUN_FIRE)
-        !HaveSpell(WIZARD_BURNING_HANDS)
+	!HaveSpell(WIZARD_SUN_FIRE)
+	!HaveSpell(WIZARD_BURNING_HANDS)
 	!HaveSpell(WIZARD_BLINDNESS)
 	!HaveSpell(WIZARD_SPOOK)
-        !HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
+	!HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
 	!HaveSpell(WIZARD_MAGIC_MISSILE)
 	!HaveSpell(WIZARD_CHROMATIC_ORB)
 	!HasItem("SCRL77",Myself) // Magic Missile
@@ -139,7 +139,7 @@ IF
 	!HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
 	!HaveSpell(WIZARD_HORROR)
 	!HaveSpell(WIZARD_HOLD_PERSON)
-        !HasItem("SCRL1I",Myself) // Hold Person
+	!HasItem("SCRL1I",Myself) // Hold Person
 	!HaveSpell(WIZARD_CHAOS)
 	!HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
 	!HaveSpell(WIZARD_CONFUSION)
@@ -154,19 +154,19 @@ THEN
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -175,10 +175,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -222,7 +222,7 @@ IF
 	!GlobalTimerNotExpired("RZ_Shout_Help_Timer","LOCALS")
 	NumCreatureGT([ENEMY],1)
 	OR(18)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -271,10 +271,10 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_STONE_SKIN)
-	Or(2)
-             !StateCheck(Myself,STATE_INVISIBLE)
-             CheckStatLT(Myself,1,STONESKINS)
-        CheckStatLT(Myself,2,STONESKINS)
+	OR(2)
+		!StateCheck(Myself,STATE_INVISIBLE)
+		CheckStatLT(Myself,1,STONESKINS)
+	CheckStatLT(Myself,2,STONESKINS)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -291,7 +291,7 @@ IF
 	OR(2)
 		See(NearestEnemyOf(Myself))
 		Global("RZ_Move_To_PC","LOCALS",1)
-        CheckStatLT(Myself,1,STONESKINS)
+	CheckStatLT(Myself,1,STONESKINS)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -431,8 +431,8 @@ IF
 	Global("RZ_See_Enemy","LOCALS",0)
 THEN
 	RESPONSE #100
-	         RandomWalk()
-        RESPONSE #100
+		RandomWalk()
+	RESPONSE #100
 END
 
 IF
@@ -567,7 +567,7 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_GHOST_ARMOR)
-	Or(2)
+	OR(2)
 	     Global("RZ_Move_To_PC","LOCALS",1)
 	     See(NearestEnemyOf(Myself))
 	Allegiance(Myself,ENEMY)
@@ -584,7 +584,7 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_SHIELD)
-	Or(2)
+	OR(2)
 	     Global("RZ_Move_To_PC","LOCALS",1)
 	     See(NearestEnemyOf(Myself))
 	Allegiance(Myself,ENEMY)
@@ -608,8 +608,8 @@ IF
 		Detect([PC.0.0.BARD_ALL])
 		Detect([PC.0.0.DRUID_ALL])
 		Detect([PC.0.0.CLERIC_ALL])
-        CheckStat(Myself,0,WIZARD_SPELL_DEFLECTION)
-        !StateCheck(Myself,STATE_SILENCED)
+	CheckStat(Myself,0,WIZARD_SPELL_DEFLECTION)
+	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
@@ -623,10 +623,10 @@ IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_MIRROR_IMAGE)
 	!StateCheck(Myself,STATE_MIRRORIMAGE)
-	Or(2)
-	     Global("RZ_Move_To_PC","LOCALS",1)
-	     See(NearestEnemyOf(Myself))
-        CheckStat([PC],0,TRUE_SIGHT)
+	OR(2)
+		Global("RZ_Move_To_PC","LOCALS",1)
+		See(NearestEnemyOf(Myself))
+	CheckStat([PC],0,TRUE_SIGHT)
 	CheckStat(SecondNearest([PC]),0,TRUE_SIGHT)
 	CheckStat(ThirdNearest([PC]),0,TRUE_SIGHT)
 	CheckStat(FourthNearest([PC]),0,TRUE_SIGHT)
@@ -647,7 +647,7 @@ IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_HASTE)
 	!StateCheck(Myself,STATE_HASTED)
-	Or(2)
+	OR(2)
 	     Global("RZ_Move_To_PC","LOCALS",1)
 	     See(NearestEnemyOf(Myself))
 	Allegiance(Myself,ENEMY)
@@ -656,7 +656,7 @@ IF
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
-	        EquipMostDamagingMelee()
+		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
 		Spell(Myself,WIZARD_HASTE)
 END
@@ -675,27 +675,27 @@ END
 
 IF
 	Global("RZ_Move_To_PC","LOCALS",1)
-	Or(2)
-             !CheckStat(Player1,0,SANCTUARY)
-	     StateCheck(Player1,STATE_INVISIBLE)
-        Or(3)
-             !CheckStat(Player2,0,SANCTUARY)
+	OR(2)
+		!CheckStat(Player1,0,SANCTUARY)
+		StateCheck(Player1,STATE_INVISIBLE)
+	OR(3)
+		!CheckStat(Player2,0,SANCTUARY)
 	     StateCheck(Player2,STATE_INVISIBLE)
 	     HPLT(Player2,1)
-        Or(3)
-             !CheckStat(Player3,0,SANCTUARY)
-	     StateCheck(Player3,STATE_INVISIBLE)
-	     HPLT(Player3,1)
-        Or(3)
-             !CheckStat(Player4,0,SANCTUARY)
+	OR(3)
+		!CheckStat(Player3,0,SANCTUARY)
+		StateCheck(Player3,STATE_INVISIBLE)
+		HPLT(Player3,1)
+	OR(3)
+		!CheckStat(Player4,0,SANCTUARY)
 	     StateCheck(Player4,STATE_INVISIBLE)
 	     HPLT(Player4,1)
-        Or(3)
-             !CheckStat(Player5,0,SANCTUARY)
+	OR(3)
+		!CheckStat(Player5,0,SANCTUARY)
 	     StateCheck(Player5,STATE_INVISIBLE)
 	     HPLT(Player5,1)
-        Or(3)
-             !CheckStat(Player6,0,SANCTUARY)
+	OR(3)
+		!CheckStat(Player6,0,SANCTUARY)
 	     StateCheck(Player6,STATE_INVISIBLE)
 	     HPLT(Player6,1)
       Allegiance(Myself,ENEMY)
@@ -812,26 +812,26 @@ END
 
 IF
 	Global("RZ_Move_To_PC","LOCALS",0)
-        !Global("RZ_See_Enemy","LOCALS",0)
+	!Global("RZ_See_Enemy","LOCALS",0)
 	!See(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
-	         RandomWalk()
+		RandomWalk()
 END
 
 IF
 	OR(2)
 	     Global("RZ_Can_Melee","LOCALS",0)
 	     Global("RZ_Ranged","LOCALS",0)
-        !GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,5)
 	!StateCheck(Myself,STATE_INVISIBLE)
 	Range(NearestEnemyOf(Myself),8)
 THEN
 	RESPONSE #100
-                 EquipMostDamagingMelee()
-	         SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
-	         RunAwayFrom(NearestEnemyOf(Myself),60)
+		EquipMostDamagingMelee()
+		SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
+		RunAwayFrom(NearestEnemyOf(Myself),60)
 END
 
 IF

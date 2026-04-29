@@ -1,10 +1,10 @@
 IF
 	Global("RZ_Can_Melee","LOCALS",0)
-        !HaveSpell(WIZARD_SUN_FIRE)
-        !HaveSpell(WIZARD_BURNING_HANDS)
+	!HaveSpell(WIZARD_SUN_FIRE)
+	!HaveSpell(WIZARD_BURNING_HANDS)
 	!HaveSpell(WIZARD_BLINDNESS)
 	!HaveSpell(WIZARD_SPOOK)
-        !HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
+	!HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
 	!HaveSpell(WIZARD_MAGIC_MISSILE)
 	!HaveSpell(WIZARD_CHROMATIC_ORB)
 	!HasItem("SCRL77",Myself) // Magic Missile
@@ -15,7 +15,7 @@ IF
 	!HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
 	!HaveSpell(WIZARD_HORROR)
 	!HaveSpell(WIZARD_DIRE_CHARM)
-        !HasItem("SCRL1I",Myself) // Hold Person
+	!HasItem("SCRL1I",Myself) // Hold Person
 	!HaveSpell(WIZARD_CHAOS)
 	!HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
 	!HaveSpell(WIZARD_CONFUSION)
@@ -29,30 +29,30 @@ THEN
 END
 
 IF
-        Global("RZ_Ranged","LOCALS",0)
-        !HasItem("MELFMET",Myself)
-        !HasItem("AROW02",Myself)
-        !HasItem("AROW01",Myself)
-        !HasItem("DAGG16",Myself)
+	Global("RZ_Ranged","LOCALS",0)
+	!HasItem("MELFMET",Myself)
+	!HasItem("AROW02",Myself)
+	!HasItem("AROW01",Myself)
+	!HasItem("DAGG16",Myself)
 THEN
 	RESPONSE #100
-              SetGlobal("RZ_Ranged","LOCALS",1)
+		SetGlobal("RZ_Ranged","LOCALS",1)
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(7)
+		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
+		Detect([PC])
+		Detect([ALLY])
+		Detect([CONTROLLED])
+		Detect([CHARMED])
+		Detect([FAMILIAR])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
@@ -61,10 +61,10 @@ IF
 	!Detect([PC])
 	!Detect([ALLY])
 	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	!Detect([CHARMED])
+	!Detect([FAMILIAR])
+	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
@@ -74,11 +74,11 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
-        Gender(Myself,FEMALE)
+	!Allegiance(Myself,ENEMY)
+	Gender(Myself,FEMALE)
 	OR(19)
-                Global("RZ_SII_Cutscene_4","MYAREA",2)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		Global("RZ_SII_Cutscene_4","MYAREA",2)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -114,11 +114,11 @@ THEN
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
-        Gender(Myself,MALE)
+	!Allegiance(Myself,ENEMY)
+	Gender(Myself,MALE)
 	OR(19)
-                Global("RZ_SII_Cutscene_4","MYAREA",2)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		Global("RZ_SII_Cutscene_4","MYAREA",2)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -155,7 +155,7 @@ IF
 	!Detect([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 THEN
 	RESPONSE #100
-	        SetGlobal("RZ_SII_Cutscene_4","MYAREA",2)
+		SetGlobal("RZ_SII_Cutscene_4","MYAREA",2)
 END
 
 IF
@@ -179,35 +179,35 @@ THEN
 END
 
 IF
-  Global("RZ_SII_Cutscene_4","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_4","MYAREA",0)
+	Detect([PC])
 THEN
     RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_4","MYAREA",1)
+		SetGlobal("RZ_SII_Cutscene_4","MYAREA",1)
 END
 
 IF
-  Global("RZ_SII_Cutscene_4","MYAREA",0)
+	Global("RZ_SII_Cutscene_4","MYAREA",0)
 THEN
     RESPONSE #100
 END
 
 IF
-        NumTimesTalkedTo(0)
-        Gender(Myself,MALE)
-        See([PC])
+	NumTimesTalkedTo(0)
+	Gender(Myself,MALE)
+	See([PC])
 THEN
     RESPONSE #100
-             StartDialogueNoSet(LastSeenBy(Myself))
+		StartDialogueNoSet(LastSeenBy(Myself))
 END   
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_STONE_SKIN)
-	Or(2)
-             !StateCheck(Myself,STATE_INVISIBLE)
-             CheckStatLT(Myself,1,STONESKINS)
-        CheckStatLT(Myself,2,STONESKINS)
+	OR(2)
+		!StateCheck(Myself,STATE_INVISIBLE)
+		CheckStatLT(Myself,1,STONESKINS)
+	CheckStatLT(Myself,2,STONESKINS)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -264,19 +264,18 @@ THEN
 END
 
 IF
-
-        OR(2)
+	OR(2)
         Global("RZ_Can_Melee","LOCALS",0)
         Global("RZ_Ranged","LOCALS",0)
-        !GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,5)
 	!StateCheck(Myself,STATE_INVISIBLE)
 	Range([0.GIANTHUMANOID.GOLEM.GOLEM_STONE],8)
 THEN
 	RESPONSE #100
-                 EquipMostDamagingMelee()
-	         SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
-	         RunAwayFrom(NearestEnemyOf(Myself),45)
+		EquipMostDamagingMelee()
+		SetGlobalTimer("RZ_Run_Away_Timer","LOCALS",12)
+		RunAwayFrom(NearestEnemyOf(Myself),45)
 END
 
 IF
@@ -360,7 +359,7 @@ IF
 	!GlobalTimerNotExpired("RZ_Invisibility_Potion_Timer","LOCALS")
 	HasItem("POTN10",Myself) // Potion of Invisibility
 	!StateCheck(Myself,STATE_INVISIBLE)
-        See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
+	See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 	Range(LastSeenBy(Myself),12)
 	CheckStat([PC],0,TRUE_SIGHT)
 	CheckStat(SecondNearest([PC]),0,TRUE_SIGHT)
@@ -379,7 +378,7 @@ IF
 	ActionListEmpty()
 	Global("RZ_Backstab","LOCALS",0)
 	StateCheck(Myself,STATE_INVISIBLE)
-        See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
+	See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -388,12 +387,12 @@ THEN
 END
 
 IF
-        Delay(1)
-        Global("RZ_Backstab","LOCALS",1)
-        HaveSpellRES("SPCL423")
-        RandomNumGT(20,10)
-        !CheckStat(Myself,4,SCRIPTINGSTATE4)
-        See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
+	Delay(1)
+	Global("RZ_Backstab","LOCALS",1)
+	HaveSpellRES("SPCL423")
+	RandomNumGT(20,10)
+	!CheckStat(Myself,4,SCRIPTINGSTATE4)
+	See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 	Range(LastSeenBy(Myself),6)
 THEN
 	RESPONSE #100
@@ -405,9 +404,9 @@ THEN
 END
 
 IF
-        Delay(1)
-        Global("RZ_Backstab","LOCALS",1)
-        See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
+	Delay(1)
+	Global("RZ_Backstab","LOCALS",1)
+	See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 	Range(LastSeenBy(Myself),6)
 THEN
 	RESPONSE #100
@@ -417,14 +416,14 @@ THEN
 END
 
 IF
-        Global("RZ_Ranged","LOCALS",0)
-        OR(2)
-	     ActionListEmpty()
-	     Global("RZ_Can_Melee","LOCALS",1)
-        !RandomNum(21,6)
-        OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     !StateCheck(Myself,STATE_INVISIBLE)
+	Global("RZ_Ranged","LOCALS",0)
+	OR(2)
+		ActionListEmpty()
+		Global("RZ_Can_Melee","LOCALS",1)
+	!RandomNum(21,6)
+	OR(2)
+		Global("RZ_Can_Melee","LOCALS",1)
+		!StateCheck(Myself,STATE_INVISIBLE)
 	See([0.GIANTHUMANOID.GOLEM.GOLEM_STONE])
 	!Range(LastSeenBy(Myself),6)
 THEN
@@ -434,10 +433,10 @@ THEN
 END
 
 IF
-        OR(2)
+	OR(2)
 	     ActionListEmpty()
 	     Global("RZ_Can_Melee","LOCALS",1)
-        !RandomNum(21,6)
+	!RandomNum(21,6)
 	OR(2)
 	     Global("RZ_Can_Melee","LOCALS",1)
 	     !StateCheck(Myself,STATE_INVISIBLE)

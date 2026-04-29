@@ -1,17 +1,17 @@
 IF
-  Global("RZ_SII_Cutscene_1","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_1","MYAREA",0)
+	Detect([PC])
 THEN
     RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_1","MYAREA",1)
-             ClearAllActions()
-             SetCutsceneLite(TRUE)
-             MultiPlayerSync()
-             DisplayStringHead(Myself,@2)
+		SetGlobal("RZ_SII_Cutscene_1","MYAREA",1)
+		ClearAllActions()
+		SetCutsceneLite(TRUE)
+		MultiPlayerSync()
+		DisplayStringHead(Myself,@2)
 END
 
 IF
-  Global("RZ_SII_Cutscene_1","MYAREA",0)
+	Global("RZ_SII_Cutscene_1","MYAREA",0)
 THEN
     RESPONSE #100
 END
@@ -33,7 +33,7 @@ IF
 	See([NEUTRAL.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
-	        EquipMostDamagingMelee()  
+		EquipMostDamagingMelee()  
 		Attack(LastSeenBy(Myself))
 END
 
