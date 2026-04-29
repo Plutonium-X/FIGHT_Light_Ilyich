@@ -640,8 +640,8 @@ UNLESS ~0x40DA HaveSpellParty~
 APPEND ~TRIGGER.IDS~ ~0x40D5 ActuallyInCombat()~
 UNLESS ~0x40D5 ActuallyInCombat()~
 
-APPEND ~State.ids~ ~0x80102033 RZ_STATE_DISABLED~   //helpless, stunned, sleeping, charmed, feeblemindnes, confusion, panic
-UNLESS ~0x80102033 RZ_STATE_DISABLED~
+APPEND ~State.ids~ ~0x8010202D STATE_DISABLED~   //helpless, stunned, sleeping, charmed, feeblemindnes, confusion, panic
+UNLESS ~0x8010202D STATE_DISABLED~
 
 
 COPY_EXISTING ~demon01.bcs~ ~override~
