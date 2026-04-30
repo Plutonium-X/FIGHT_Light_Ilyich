@@ -1,7 +1,7 @@
 IF
-	AreaCheck("AR0602")
+	AreaCheck("AR0602")  // Irenicus's Dungeon 1st Floor
 THEN
-    RESPONSE #100
+	RESPONSE #100
 		Enemy()
 		ChangeAIScript("RZSIIGEN",OVERRIDE)
 		ChangeAIScript("RZSIIWAA",CLASS)
@@ -38,7 +38,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
@@ -66,7 +66,7 @@ IF
 THEN
 	RESPONSE #100
 		Enemy()
-		DisplayStringHead(Myself,4939)
+		DisplayStringHead(Myself,4939)  // Me temper's bad enough without ye botherin' me.
 		ChangeAIScript("RZSIIWAA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
@@ -79,7 +79,7 @@ IF
 THEN
 	RESPONSE #100
 		Enemy()
-		DisplayStringHead(Myself,4939)
+		DisplayStringHead(Myself,4939)  // Me temper's bad enough without ye botherin' me.
 		ChangeAIScript("RZSIIWAA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
@@ -100,24 +100,24 @@ IF
 	Global("RZ_SII_Cutscene_3","MYAREA",0)
 	Detect([PC])
 THEN
-    RESPONSE #100
+	RESPONSE #100
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
 END
 
 IF
 	Global("RZ_SII_Cutscene_3","MYAREA",0)
 THEN
-    RESPONSE #100
+	RESPONSE #100
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN08",Myself) // Potion of Healing
+	HasItem("POTN08",Myself)  // Potion of Healing
 	HPPercentLT(Myself,80)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN08",Myself) // Potion of Healing
+		UseItem("POTN08",Myself)  // Potion of Healing
 END
 
 IF
@@ -137,6 +137,3 @@ THEN
 	RESPONSE #100
 		RandomWalk()
 END
-
-
-

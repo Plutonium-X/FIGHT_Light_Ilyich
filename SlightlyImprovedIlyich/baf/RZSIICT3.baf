@@ -1,7 +1,7 @@
 IF
 	OR(2)
 		Global("RZ_SII_Cutscene_3","MYAREA",2)
-        !Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		!Detect([NEUTRAL.0.DWARF.FIGHTER_ALL])
 	Gender(Myself,FEMALE)
 	!See([PC])
 THEN
@@ -19,14 +19,14 @@ IF
 	!See([PC])
 THEN
 	RESPONSE #100
-		Enemy() 
+		Enemy()
 		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATT",CLASS)
 END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("AROW01",Myself)
+	!HasItem("AROW01",Myself)  // Arrow
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)
@@ -62,7 +62,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
@@ -93,13 +93,13 @@ THEN
 	RESPONSE #100
 		Enemy()
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
-		DisplayStringHead(Myself,61896)
+		DisplayStringHead(Myself,61896)  // Poison or no, you'll be dead quick enough...
 		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 	RESPONSE #100
 		Enemy()
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
-		DisplayStringHead(Myself,61896)
+		DisplayStringHead(Myself,61896)  // Poison or no, you'll be dead quick enough...
 		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
@@ -131,13 +131,13 @@ THEN
 	RESPONSE #100
 		Enemy()
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
-		DisplayStringHead(Myself,61886)
+		DisplayStringHead(Myself,61886)  // Beg for death, and I'll make it quick!
 		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATT",CLASS)
 	RESPONSE #100
 		Enemy()
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",2)
-		DisplayStringHead(Myself,61887)
+		DisplayStringHead(Myself,61887)  // No one crosses the Shadow Thieves and lives!
 		ChangeAIScript("RZSIITHA",OVERRIDE)
 		ChangeAIScript("RZSIIATT",CLASS)
 END
@@ -155,37 +155,36 @@ IF
 	Global("RZ_SII_Cutscene_3","MYAREA",0)
 	Detect([PC])
 THEN
-    RESPONSE #100
+	RESPONSE #100
 		SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
 END
 
 IF
 	Global("RZ_SII_Cutscene_3","MYAREA",0)
 THEN
-    RESPONSE #100
+	RESPONSE #100
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN08",Myself) // Potion of Healing
+	HasItem("POTN08",Myself)  // Potion of Healing
 	HPPercentLT(Myself,80)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN08",Myself) // Potion of Healing
+		UseItem("POTN08",Myself)  // Potion of Healing
 END
 
 IF
-
 	OR(2)
-        Global("RZ_Can_Melee","LOCALS",0)
-        Global("RZ_Ranged","LOCALS",0)
+		Global("RZ_Can_Melee","LOCALS",0)
+		Global("RZ_Ranged","LOCALS",0)
 	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,5)
 	!StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
-	     Range([NEUTRAL.0.DWARF.FIGHTER_ALL],8)
-	     Range([ENEMY.0.DWARF.FIGHTER_ALL],8)
+		Range([NEUTRAL.0.DWARF.FIGHTER_ALL],8)
+		Range([ENEMY.0.DWARF.FIGHTER_ALL],8)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -196,11 +195,11 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	!GlobalTimerNotExpired("RZ_Invisibility_Potion_Timer","LOCALS")
-	HasItem("POTN10",Myself) // Potion of Invisibility
+	HasItem("POTN10",Myself)  // Potion of Invisibility
 	!StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 	Range(LastSeenBy(Myself),12)
 	CheckStat([PC],0,TRUE_SIGHT)
 	CheckStat(SecondNearest([PC]),0,TRUE_SIGHT)
@@ -212,7 +211,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
 		SetGlobalTimer("RZ_Invisibility_Potion_Timer","LOCALS",12)
-		UseItem("POTN10",Myself) // Potion of Invisibility
+		UseItem("POTN10",Myself)  // Potion of Invisibility
 END
 
 IF
@@ -220,8 +219,8 @@ IF
 	Global("RZ_Backstab","LOCALS",0)
 	StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -232,17 +231,17 @@ END
 IF
 	Delay(1)
 	Global("RZ_Backstab","LOCALS",1)
-	HaveSpellRES("SPCL423")
+	HaveSpellRES("SPCL423")  // Poison Weapon
 	RandomNumGT(20,10)
 	!CheckStat(Myself,4,SCRIPTINGSTATE4)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 	Range(LastSeenBy(Myself),6)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
-		SpellRES("SPCL423",Myself)
+		SpellRES("SPCL423",Myself)  // Poison Weapon
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
 		SetGlobal("RZ_Backstab","LOCALS",0)
 		AttackOneRound(LastSeenBy(Myself))
@@ -252,8 +251,8 @@ IF
 	Delay(1)
 	Global("RZ_Backstab","LOCALS",1)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 	Range(LastSeenBy(Myself),6)
 THEN
 	RESPONSE #100
@@ -266,8 +265,8 @@ IF
 	Global("RZ_Ranged","LOCALS",0)
 	!RandomNum(21,6)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 	!Range(LastSeenBy(Myself),6)
 THEN
 	RESPONSE #100
@@ -278,8 +277,8 @@ END
 IF
 	!RandomNum(21,6)
 	OR(2)
-	     See([NEUTRAL.0.DWARF.FIGHTER_ALL])
-	     See([ENEMY.0.DWARF.FIGHTER_ALL])
+		See([NEUTRAL.0.DWARF.FIGHTER_ALL])
+		See([ENEMY.0.DWARF.FIGHTER_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()

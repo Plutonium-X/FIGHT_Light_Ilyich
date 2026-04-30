@@ -1,8 +1,8 @@
 IF
 	OR(3)
-        !Allegiance(Myself,ENEMY)
-        !See(NearestEnemyOf(Myself))
-        Global("RZ_See_Enemy","LOCALS",0)
+		!Allegiance(Myself,ENEMY)
+		!See(NearestEnemyOf(Myself))
+		Global("RZ_See_Enemy","LOCALS",0)
 THEN
 	RESPONSE #100
 END
@@ -302,7 +302,7 @@ IF
 		!See([PC])
 		StateCheck([PC],STATE_DISABLED)
 		!CheckStat([PC],0,SANCTUARY)
-		!CheckStat([PC],0,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)
+	!CheckStat([PC],0,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)
 	OR(4)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
@@ -342,15 +342,15 @@ END
 IF
 	Global("RZ_Ranged","LOCALS",0)
 	OR(2)
-	     ActionListEmpty()
-	     Global("RZ_Can_Melee","LOCALS",1)
-        !RandomNum(21,6)
+		ActionListEmpty()
+		Global("RZ_Can_Melee","LOCALS",1)
+	!RandomNum(21,6)
 	OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     !StateCheck(Myself,STATE_INVISIBLE)
+		Global("RZ_Can_Melee","LOCALS",1)
+		!StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     CheckStat(Myself,0,SANCTUARY)
+		Global("RZ_Can_Melee","LOCALS",1)
+		CheckStat(Myself,0,SANCTUARY)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	!Range(LastSeenBy(Myself),6)
@@ -363,23 +363,22 @@ THEN
 		AttackReevaluate(LastSeenBy(Myself),15)
 END
 
-
 IF
 	OR(2)
-	     ActionListEmpty()
-	     Global("RZ_Can_Melee","LOCALS",1)
-        !RandomNum(21,6)
+		ActionListEmpty()
+		Global("RZ_Can_Melee","LOCALS",1)
+	!RandomNum(21,6)
 	OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     !StateCheck(Myself,STATE_INVISIBLE)
+		Global("RZ_Can_Melee","LOCALS",1)
+		!StateCheck(Myself,STATE_INVISIBLE)
 	OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     CheckStat(Myself,0,SANCTUARY)
+		Global("RZ_Can_Melee","LOCALS",1)
+		CheckStat(Myself,0,SANCTUARY)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	OR(2)
-	     Global("RZ_Can_Melee","LOCALS",1)
-	     Range(LastSeenBy(Myself),6)
+		Global("RZ_Can_Melee","LOCALS",1)
+		Range(LastSeenBy(Myself),6)
 	!Allegiance(LastSeenBy(Myself),ENEMY)
 	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
 THEN
@@ -395,3 +394,4 @@ THEN
 	RESPONSE #100
 		RandomWalk()
 END
+

@@ -1,28 +1,28 @@
 IF
 	Global("RZ_Can_Melee","LOCALS",0)
-	!HaveSpell(WIZARD_SUN_FIRE)
-	!HaveSpell(WIZARD_BURNING_HANDS)
-	!HaveSpell(WIZARD_BLINDNESS)
-	!HaveSpell(WIZARD_SPOOK)
-	!HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
-	!HaveSpell(WIZARD_MAGIC_MISSILE)
-	!HaveSpell(WIZARD_CHROMATIC_ORB)
-	!HasItem("SCRL77",Myself) // Magic Missile
-	!HaveSpell(WIZARD_FLAME_ARROW)
-	!HasItem("SCRL1F",Myself) // Flame Arrow
-	!HaveSpell(WIZARD_MELF_ACID_ARROW)
-	!HaveSpell(WIZARD_SKULL_TRAP)
-	!HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
-	!HaveSpell(WIZARD_HORROR)
-	!HaveSpell(WIZARD_HOLD_PERSON)
-	!HasItem("SCRL1I",Myself) // Hold Person
-	!HaveSpell(WIZARD_CHAOS)
-	!HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
-	!HaveSpell(WIZARD_CONFUSION)
-	!HasItem("SCRL1O",Myself) // Slow
-	!HaveSpell(WIZARD_SLOW)
-	!HaveSpell(WIZARD_GLITTERDUST)
-	!HaveSpell(WIZARD_GREATER_MALISON)
+	!HaveSpell(WIZARD_SUN_FIRE)  // SPWI523.SPL (Sunfire)
+	!HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+	!HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+	!HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
+	!HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
+	!HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+	!HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
+	!HasItem("SCRL77",Myself)  // Magic Missile
+	!HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+	!HasItem("SCRL1F",Myself)  // Flame Arrow
+	!HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+	!HaveSpell(WIZARD_SKULL_TRAP)  // SPWI313.SPL (Skull Trap)
+	!HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
+	!HaveSpell(WIZARD_HORROR)  // SPWI205.SPL (Horror)
+	!HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
+	!HasItem("SCRL1I",Myself)  // Hold Person
+	!HaveSpell(WIZARD_CHAOS)  // SPWI508.SPL (Chaos)
+	!HaveSpell(WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+	!HaveSpell(WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+	!HasItem("SCRL1O",Myself)  // Slow
+	!HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
+	!HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+	!HaveSpell(WIZARD_GREATER_MALISON)  // SPWI412.SPL (Greater Malison)
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Can_Melee","LOCALS",1)
@@ -59,7 +59,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
@@ -122,7 +122,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_VOCALIZE)
+	HaveSpell(WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)
 	StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -130,26 +130,26 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(Myself,WIZARD_VOCALIZE)
+		Spell(Myself,WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)
 END
 
 IF
 	Global("RZ_SII_Cutscene_5","MYAREA",0)
 	Detect([PC])
 THEN
-    RESPONSE #100
+	RESPONSE #100
 		SetGlobal("RZ_SII_Cutscene_5","MYAREA",1)
 END
 
 IF
 	Global("RZ_SII_Cutscene_5","MYAREA",0)
 THEN
-    RESPONSE #100
+	RESPONSE #100
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_STONE_SKIN)
+	HaveSpell(WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 	OR(2)
 		!StateCheck(Myself,STATE_INVISIBLE)
 		CheckStatLT(Myself,1,STONESKINS)
@@ -161,13 +161,13 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(Myself,WIZARD_STONE_SKIN)
+		Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 END
 
 IF
 	OR(2)
-        Global("RZ_Can_Melee","LOCALS",0)
-        Global("RZ_Ranged","LOCALS",0)
+		Global("RZ_Can_Melee","LOCALS",0)
+		Global("RZ_Ranged","LOCALS",0)
 	!GlobalTimerNotExpired("RZ_Run_Away_Timer","LOCALS")
 	RandomNumGT(20,5)
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -183,7 +183,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_GHOST_ARMOR)
+	HaveSpell(WIZARD_GHOST_ARMOR)  // SPWI317.SPL (Ghost Armor)
 	Detect([PC])
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -192,12 +192,12 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(Myself,WIZARD_GHOST_ARMOR)
+		Spell(Myself,WIZARD_GHOST_ARMOR)  // SPWI317.SPL (Ghost Armor)
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
+	HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
 	RandomNumGT(20,5)
 	OR(2)
 		See([NEUTRAL.0.0.THIEF_ALL])
@@ -209,12 +209,12 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_AGANNAZAR_SCORCHER)
+		Spell(LastSeenBy(Myself),WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_MAGIC_MISSILE)
+	HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 	RandomNumGT(20,5)
 	OR(2)
 		See([NEUTRAL.0.0.THIEF_ALL])
@@ -226,7 +226,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)
+		Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
 
 IF

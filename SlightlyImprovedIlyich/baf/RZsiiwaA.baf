@@ -1,17 +1,17 @@
 IF
 	Die()
-	Name("ulvaryl",Myself)
+	Name("ulvaryl",Myself)  // Ulvaryl
 THEN
 	RESPONSE #100
-		ReallyForceSpellDead(Myself,VAMPIRE_GAS_FORM_CHANGE)
+		ReallyForceSpellDead(Myself,VAMPIRE_GAS_FORM_CHANGE)  // SPIN964.SPL (No such index)
 END
 
 IF
 	HPLT(Myself,10)
-	Name("ulvaryl",Myself)
+	Name("ulvaryl",Myself)  // Ulvaryl
 THEN
 	RESPONSE #100
-		ReallyForceSpellDead(Myself,VAMPIRE_BAT_FORM_CHANGE)
+		ReallyForceSpellDead(Myself,VAMPIRE_BAT_FORM_CHANGE)  // SPIN963.SPL (No such index)
 		AddexperienceParty(6000)
 END
 
@@ -83,7 +83,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
@@ -120,36 +120,36 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN52",Myself) // Potion of Extra Healing
+	HasItem("POTN52",Myself)  // Potion of Extra Healing
 	CheckStat(Myself,0,SCRIPTINGSTATE4)
 	HPPercentLT(Myself,74)
-	!Name("RZsiiD07",Myself)
+	!Name("RZsiiD07",Myself)  // Duergar
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN52",Myself) // Potion of Extra Healing
+		UseItem("POTN52",Myself)  // Potion of Extra Healing
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN52",Myself) // Potion of Extra Healing
+	HasItem("POTN52",Myself)  // Potion of Extra Healing
 	!CheckStat(Myself,0,SCRIPTINGSTATE4)
 	HPPercentLT(Myself,77)
-	!Name("RZsiiD07",Myself)
+	!Name("RZsiiD07",Myself)  // Duergar
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN52",Myself) // Potion of Extra Healing
+		UseItem("POTN52",Myself)  // Potion of Extra Healing
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN08",Myself) // Potion of Healing
+	HasItem("POTN08",Myself)  // Potion of Healing
 	HPPercentLT(Myself,80)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN08",Myself) // Potion of Healing
+		UseItem("POTN08",Myself)  // Potion of Healing
 END
 
 IF
@@ -179,7 +179,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN11",Myself) // Potion of Invulnerability
+	HasItem("POTN11",Myself)  // Potion of Invulnerability
 	OR(2)
 		See(NearestEnemyOf(Myself))
 		Global("RZ_Move_To_PC","LOCALS",1)
@@ -193,17 +193,17 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN11",Myself) // Potion of Invulnerability
+		UseItem("POTN11",Myself)  // Potion of Invulnerability
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN14",Myself) // Oil of Speed
+	HasItem("POTN14",Myself)  // Oil of Speed
 	OR(2)
 		See(NearestEnemyOf(Myself))
 		Global("RZ_Move_To_PC","LOCALS",1)
 	Allegiance(Myself,ENEMY)
-	!Name("RZsiiH01",Myself)
+	!Name("RZsiiH01",Myself)  // Hobgoblin Captain
 	OR(2)
 		RandomNumGT(20,10)
 		DifficultyGT(EASY)
@@ -213,15 +213,13 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN14",Myself) // Oil of Speed
+		UseItem("POTN14",Myself)  // Oil of Speed
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpellRES("SPCL321") // Enrage
-	//OR(2)
-		!GlobalTimerNotExpired("RZ_Enrage_Timer","LOCALS")
-		//CheckStat(Myself,0,SCRIPTINGSTATE4)              //out until Detectable stats is fixed
+	HaveSpellRES("SPCL321")  // Enrage
+	!GlobalTimerNotExpired("RZ_Enrage_Timer","LOCALS")
 	Allegiance(Myself,ENEMY)
 	OR(2)
 		See(NearestEnemyOf(Myself))
@@ -229,33 +227,33 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		SetGlobalTimer("RZ_Enrage_Timer","LOCALS",90)
-		SpellRES("SPCL321",Myself) // Enrage
+		SetGlobalTimer("RZ_Enrage_Timer","LOCALS",EIGHTEEN_MINUTES)
+		SpellRES("SPCL321",Myself)  // Enrage
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN14",Myself) // Oil of Speed
-	!Name("RZsiiH01",Myself)
+	HasItem("POTN14",Myself)  // Oil of Speed
+	!Name("RZsiiH01",Myself)  // Hobgoblin Captain
 	OR(2)
 		See(NearestEnemyOf(Myself))
 		Global("RZ_Move_To_PC","LOCALS",1)
 	Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
-		DestroyItem("POTN14") // Oil of Speed
+		DestroyItem("POTN14")  // Oil of Speed
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN11",Myself) // Potion of Invulnerability
+	HasItem("POTN11",Myself)  // Potion of Invulnerability
 	OR(2)
 		See(NearestEnemyOf(Myself))
 		Global("RZ_Move_To_PC","LOCALS",1)
 	Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
-		DestroyItem("POTN11") // Potion of Invulnerability
+		DestroyItem("POTN11")  // Potion of Invulnerability
 END
 
 IF
@@ -430,12 +428,12 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("BOLT01",Myself)
-	!HasItem("BOLT03",Myself)
-	!HasItem("BOLT04",Myself)
-	!HasItem("AROW01",Myself)
-	!HasItem("AROW05",Myself)
-	!HasItem("AROW08",Myself)
+	!HasItem("BOLT01",Myself)  // Bolt
+	!HasItem("BOLT03",Myself)  // Bolt of Lightning
+	!HasItem("BOLT04",Myself)  // Bolt of Biting
+	!HasItem("AROW01",Myself)  // Arrow
+	!HasItem("AROW05",Myself)  // Arrow of Biting
+	!HasItem("AROW08",Myself)  // Arrow of Fire
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

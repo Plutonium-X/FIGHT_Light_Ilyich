@@ -66,7 +66,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
@@ -103,36 +103,36 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN52",Myself) // Potion of Extra Healing
+	HasItem("POTN52",Myself)  // Potion of Extra Healing
 	CheckStat(Myself,0,SCRIPTINGSTATE4)
 	HPPercentLT(Myself,70)
-	!Name("RZsiiD07",Myself)
+	!Name("RZsiiD07",Myself)  // Duergar
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN52",Myself) // Potion of Extra Healing
+		UseItem("POTN52",Myself)  // Potion of Extra Healing
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN52",Myself) // Potion of Extra Healing
+	HasItem("POTN52",Myself)  // Potion of Extra Healing
 	!CheckStat(Myself,0,SCRIPTINGSTATE4)
 	HPPercentLT(Myself,75)
-	!Name("RZsiiD07",Myself)
+	!Name("RZsiiD07",Myself)  // Duergar
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN52",Myself) // Potion of Extra Healing
+		UseItem("POTN52",Myself)  // Potion of Extra Healing
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN08",Myself) // Potion of Healing
+	HasItem("POTN08",Myself)  // Potion of Healing
 	HPPercentLT(Myself,80)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN08",Myself) // Potion of Healing
+		UseItem("POTN08",Myself)  // Potion of Healing
 END
 
 IF
@@ -231,8 +231,8 @@ END
 
 IF
 	OR(2)
-	Global("RZ_Move_To_Mage","LOCALS",1)
-	Global("RZ_Move_To_PC","LOCALS",1)
+		Global("RZ_Move_To_Mage","LOCALS",1)
+		Global("RZ_Move_To_PC","LOCALS",1)
 THEN
 	RESPONSE #100
 END
@@ -482,8 +482,8 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("BOLT01",Myself)
-	!HasItem("BOLT03",Myself)
+	!HasItem("BOLT01",Myself)  // Bolt
+	!HasItem("BOLT03",Myself)  // Bolt of Lightning
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)
