@@ -189,12 +189,12 @@ IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
 	RandomNumGT(20,5)
-	OR(2)
-		See([NEUTRAL.0.0.THIEF_ALL])
-		See([ENEMY.0.0.THIEF_ALL])
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
+	OR(2)
+		See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -206,12 +206,12 @@ IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 	RandomNumGT(20,5)
-	OR(2)
-		See([NEUTRAL.0.0.THIEF_ALL])
-		See([ENEMY.0.0.THIEF_ALL])
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
+	OR(2)
+		See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
