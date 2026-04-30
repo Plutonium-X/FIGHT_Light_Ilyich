@@ -17,12 +17,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HasItem("SCRL7I",Myself)  // Death Spell
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(11)
 		NumCreatureLT([GOODCUTOFF.0.0.0.0.SUMMONED],1)
 		!See([GOODCUTOFF.0.0.0.0.SUMMONED])
@@ -330,23 +331,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL7I",Myself)  // Death Spell
-	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	!Allegiance(LastSeenBy(Myself),ENEMY)
-	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -369,7 +354,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(8)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -569,18 +554,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_GREATER_MALISON)  // SPWI412.SPL (Greater Malison)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -599,11 +573,15 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+	RandomNumGT(20,5)
+	OR(2)
+		!HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
+		RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(8)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -713,23 +691,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
-	RandomNumGT(20,5)
-	OR(2)
-		!HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
-		RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -751,11 +713,14 @@ IF
 	OR(2)
 		HasItem("SCRL1O",Myself)  // Slow
 		HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
+	OR(2)
+		!HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+		RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(11)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -905,23 +870,7 @@ IF
 	!GlobalTimerNotExpired("RZ_Cast_Slow_Timer","LOCALS")
 	HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
 	RandomNumGT(20,5)
-	OR(2)
-		!HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
-		RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)
-	!Class(LastSeenBy(Myself),MONK)
-	!StateCheck(LastSeenBy(Myself),STATE_SLOWED)
-	!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -935,23 +884,7 @@ IF
 	!GlobalTimerNotExpired("RZ_Slow_Timer","LOCALS")
 	HasItem("SCRL1O",Myself)  // Slow
 	RandomNumGT(20,10)
-	OR(2)
-		!HaveSpell(WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
-		RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)
-	!Class(LastSeenBy(Myself),MONK)
-	!StateCheck(LastSeenBy(Myself),STATE_SLOWED)
-	!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -970,6 +903,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	OR(6)
 		HaveSpell(WIZARD_CHAOS)  // SPWI508.SPL (Chaos)
 		HaveSpell(WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
@@ -981,7 +915,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(12)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1234,12 +1168,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HasItem("SCRL5L",Myself)  // Polymorph Other
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(8)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1439,18 +1374,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL5L",Myself)  // Polymorph Other
-	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -1468,12 +1392,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(19)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1715,34 +1640,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
-	RandomNumGT(20,10)
-	OR(2)
-		RandomNumGT(20,10)
-		!HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself))  // Imoen's Belt
-	!Kit(LastSeenBy(Myself),INQUISITOR)
-	!Kit(LastSeenBy(Myself),UNDEADHUNTER)
-	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)
-	!CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE4)
-	!CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	CheckStat(LastSeenBy(Myself),0,HELD)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -1760,6 +1658,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	OR(6)
 		HasItem("SCRL8B",Myself)  // Summon Nishruu
 		HasItem("SCRL7W",Myself)  // Wyvern Call
@@ -1771,7 +1670,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(6)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1924,7 +1823,6 @@ END
 
 IF
 	HasItem("SCRL8B",Myself)  // Summon Nishruu
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1935,7 +1833,6 @@ END
 
 IF
 	HasItem("SCRL7W",Myself)  // Wyvern Call
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1946,7 +1843,6 @@ END
 
 IF
 	HasItem("SCRL7E",Myself)  // Invisible Stalker
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1957,7 +1853,6 @@ END
 
 IF
 	HasItem("SCRL6R",Myself)  // Spider Spawn
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1968,7 +1863,6 @@ END
 
 IF
 	HasItem("SCRL2G",Myself)  // Monster Summoning III
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1979,7 +1873,6 @@ END
 
 IF
 	HasItem("SCRL2A",Myself)  // Monster Summoning II
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1998,12 +1891,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	HaveSpell(WIZARD_HORROR)  // SPWI205.SPL (Horror)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(18)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -2233,7 +2127,6 @@ THEN
 END
 
 IF
-	RandomNumGT(20,5)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -2252,12 +2145,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(12)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -2415,8 +2309,6 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	RandomNumGT(20,5)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -2435,6 +2327,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	HaveSpell(WIZARD_SKULL_TRAP)  // SPWI313.SPL (Skull Trap)
 	Allegiance(Myself,ENEMY)
 	OR(2)
@@ -2443,7 +2336,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(15)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -2811,11 +2704,7 @@ THEN
 END
 
 IF
-	RandomNumGT(20,5)
 	Allegiance(LastSeenBy(Myself),PC)
-	OR(2)
-		!Range(LastSeenBy(Myself),14)
-		StateCheck(Myself,STATE_MIRRORIMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2833,6 +2722,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	OR(3)
 		HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 		HasItem("SCRL1F",Myself)  // Flame Arrow
@@ -2841,7 +2731,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(13)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -3162,7 +3052,6 @@ END
 
 IF
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -3176,7 +3065,6 @@ END
 
 IF
 	HasItem("SCRL1F",Myself)  // Flame Arrow
-	RandomNumGT(20,10)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -3191,7 +3079,6 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -3213,6 +3100,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	OR(7)
 		HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
 		HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
@@ -3225,7 +3113,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(13)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -3546,7 +3434,6 @@ END
 
 IF
 	HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
@@ -3560,7 +3447,6 @@ END
 
 IF
 	HaveSpell(WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
@@ -3574,7 +3460,6 @@ END
 
 IF
 	HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
@@ -3588,7 +3473,6 @@ END
 
 IF
 	HasItem("SCRL77",Myself)  // Magic Missile
-	RandomNumGT(20,10)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
@@ -3624,7 +3508,6 @@ END
 
 IF
 	HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
-	RandomNumGT(20,5)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -3643,6 +3526,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	OR(2)
 		HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 		HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
@@ -3650,7 +3534,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(20)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -3905,7 +3789,6 @@ END
 
 IF
 	HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
@@ -3919,7 +3802,6 @@ END
 
 IF
 	HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
-	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
@@ -3941,12 +3823,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,5)
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(13)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -4266,8 +4149,6 @@ THEN
 END
 
 IF
-	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
-	RandomNumGT(20,5)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100

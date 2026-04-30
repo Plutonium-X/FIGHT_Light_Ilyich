@@ -157,7 +157,7 @@ IF
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 	HasItem("SCRL1Q",Myself)  // Vampiric Touch
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(9)
 		NumCreatureLT([PC],1)
 		!See([PC])
@@ -306,7 +306,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(12)
 		NumCreatureLT([PC],1)
 		!See([PC])
@@ -488,7 +488,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(10)
 		NumCreatureLT([PC],1)
 		!See([PC])
@@ -648,7 +648,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(11)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -951,12 +951,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(10)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1090,7 +1091,6 @@ THEN
 END
 
 IF
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1109,12 +1109,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(12)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1272,7 +1273,6 @@ THEN
 END
 
 IF
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
@@ -1291,12 +1291,13 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
+	RandomNumGT(20,10)
 	HaveSpell(WIZARD_CHARM_PERSON)  // SPWI104.SPL (Charm Person)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	See(NearestEnemyOf(Myself))
+	Detect([PC])
 	OR(16)
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
@@ -1502,7 +1503,6 @@ THEN
 END
 
 IF
-	RandomNumGT(20,10)
 	Allegiance(LastSeenBy(Myself),PC)
 THEN
 	RESPONSE #100
