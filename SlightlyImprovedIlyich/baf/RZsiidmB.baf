@@ -240,7 +240,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("R_ZAction_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL1I",Myself)  // Hold Person
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)

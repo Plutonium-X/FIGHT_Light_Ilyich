@@ -1824,7 +1824,7 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("R_ZAction_Timer","LOCALS")
+	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 	RandomNumGT(20,10)
 	OR(2)
