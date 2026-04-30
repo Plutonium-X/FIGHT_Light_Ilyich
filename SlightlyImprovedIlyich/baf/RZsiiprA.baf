@@ -626,7 +626,7 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("BULL01",Myself)  // Bullet
+	!HasItemEquiped("BULL01",Myself)  // Bullet
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

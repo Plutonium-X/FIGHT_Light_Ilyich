@@ -26,7 +26,7 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("AROW01",Myself)  // Arrow
+	!HasItemEquiped("AROW01",Myself)  // Arrow
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

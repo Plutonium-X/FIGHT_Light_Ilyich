@@ -30,10 +30,10 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	!HasItem("AROW02",Myself)  // Arrow +1
-	!HasItem("AROW01",Myself)  // Arrow
-	!HasItem("DAGG16",Myself)  // Poisoned Throwing Dagger
+	!HasItemEquiped("MELFMET",Myself)  // Melf's Minute Meteor
+	!HasItemEquiped("AROW02",Myself)  // Arrow +1
+	!HasItemEquiped("AROW01",Myself)  // Arrow
+	!HasItemEquiped("DAGG16",Myself)  // Poisoned Throwing Dagger
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

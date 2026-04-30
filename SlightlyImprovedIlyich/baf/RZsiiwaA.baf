@@ -428,12 +428,12 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("BOLT01",Myself)  // Bolt
-	!HasItem("BOLT03",Myself)  // Bolt of Lightning
-	!HasItem("BOLT04",Myself)  // Bolt of Biting
-	!HasItem("AROW01",Myself)  // Arrow
-	!HasItem("AROW05",Myself)  // Arrow of Biting
-	!HasItem("AROW08",Myself)  // Arrow of Fire
+	!HasItemEquiped("BOLT01",Myself)  // Bolt
+	!HasItemEquiped("BOLT03",Myself)  // Bolt of Lightning
+	!HasItemEquiped("BOLT04",Myself)  // Bolt of Biting
+	!HasItemEquiped("AROW01",Myself)  // Arrow
+	!HasItemEquiped("AROW05",Myself)  // Arrow of Biting
+	!HasItemEquiped("AROW08",Myself)  // Arrow of Fire
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

@@ -593,9 +593,9 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("AROW01",Myself)  // Arrow
-	!HasItem("AROW02",Myself)  // Arrow +1
-	!HasItem("AROW05",Myself)  // Arrow of Biting
+	!HasItemEquiped("AROW01",Myself)  // Arrow
+	!HasItemEquiped("AROW02",Myself)  // Arrow +1
+	!HasItemEquiped("AROW05",Myself)  // Arrow of Biting
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)

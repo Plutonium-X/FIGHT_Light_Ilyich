@@ -482,8 +482,8 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItem("BOLT01",Myself)  // Bolt
-	!HasItem("BOLT03",Myself)  // Bolt of Lightning
+	!HasItemEquiped("BOLT01",Myself)  // Bolt
+	!HasItemEquiped("BOLT03",Myself)  // Bolt of Lightning
 THEN
 	RESPONSE #100
 		SetGlobal("RZ_Ranged","LOCALS",1)
