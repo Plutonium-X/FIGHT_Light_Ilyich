@@ -38,13 +38,8 @@ END
 
 IF
 	Global("RZ_Rest","LOCALS",0)
-	OR(7)
-		Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-		Detect([PC])
-		Detect([ALLY])
-		Detect([CONTROLLED])
-		Detect([CHARMED])
-		Detect([FAMILIAR])
+	OR(2)
+		Detect([GOODCUTOFF])
 		Detect(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
@@ -54,14 +49,9 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Rest_Timer","LOCALS")
-	!Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	!Detect([PC])
-	!Detect([ALLY])
-	!Detect([CONTROLLED])
-	!Detect([CHARMED])
-	!Detect([FAMILIAR])
-	!Detect(NearestEnemyOf(Myself))
 	CombatCounter(0)
+	!Detect([GOODCUTOFF])
+	!Detect(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
