@@ -27,7 +27,7 @@ IF
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItem("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Kit([PC],UNDEADHUNTER)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -45,7 +45,7 @@ IF
 		RandomNumGT(20,11)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Kit(SecondNearest([PC]),UNDEADHUNTER)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -63,7 +63,7 @@ IF
 		RandomNumGT(20,12)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Kit(ThirdNearest([PC]),UNDEADHUNTER)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -81,7 +81,7 @@ IF
 		RandomNumGT(20,13)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Kit(FourthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -99,7 +99,7 @@ IF
 		RandomNumGT(20,14)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Kit(FifthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -117,7 +117,7 @@ IF
 		RandomNumGT(20,15)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Kit(SixthNearest([PC]),UNDEADHUNTER)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -134,7 +134,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItem("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Kit([PC],UNDEADHUNTER)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -151,7 +151,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Kit(SecondNearest([PC]),UNDEADHUNTER)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -168,7 +168,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Kit(ThirdNearest([PC]),UNDEADHUNTER)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -185,7 +185,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Kit(FourthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -202,7 +202,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Kit(FifthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -219,7 +219,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Kit(SixthNearest([PC]),UNDEADHUNTER)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -246,7 +246,7 @@ IF
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItem("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
+	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
 	!Kit(LastSeenBy(Myself),INQUISITOR)
 	!Kit(LastSeenBy(Myself),UNDEADHUNTER)
 	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
@@ -1959,7 +1959,7 @@ IF
 		RandomNumGT(20,10)
         NumCreatureLT([PC],1)
 		!See([PC])
-		HasItem("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Class([PC],MONK)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -1976,7 +1976,7 @@ IF
 		RandomNumGT(20,11)
         NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Class(SecondNearest([PC]),MONK)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -1993,7 +1993,7 @@ IF
 		RandomNumGT(20,12)
         NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Class(ThirdNearest([PC]),MONK)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2010,7 +2010,7 @@ IF
 		RandomNumGT(20,13)
         NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Class(FourthNearest([PC]),MONK)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2027,7 +2027,7 @@ IF
 		RandomNumGT(20,14)
         NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Class(FifthNearest([PC]),MONK)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2044,7 +2044,7 @@ IF
 		RandomNumGT(20,15)
         NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Class(SixthNearest([PC]),MONK)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2060,7 +2060,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItem("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Class([PC],MONK)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -2076,7 +2076,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItem("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Class(SecondNearest([PC]),MONK)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2092,7 +2092,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItem("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Class(ThirdNearest([PC]),MONK)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2108,7 +2108,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItem("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Class(FourthNearest([PC]),MONK)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2124,7 +2124,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItem("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Class(FifthNearest([PC]),MONK)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2140,7 +2140,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItem("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Class(SixthNearest([PC]),MONK)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2166,7 +2166,7 @@ IF
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItem("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
+	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
 	!Kit(LastSeenBy(Myself),INQUISITOR)
 	!Class(LastSeenBy(Myself),MONK)
 	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
