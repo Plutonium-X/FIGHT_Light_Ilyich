@@ -2032,16 +2032,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL8B",Myself)  // Summon Nishruu
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2050,16 +2043,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL7W",Myself)  // Wyvern Call
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2068,16 +2054,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL7E",Myself)  // Invisible Stalker
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2086,16 +2065,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL6R",Myself)  // Spider Spawn
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2104,16 +2076,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL2G",Myself)  // Monster Summoning III
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2122,16 +2087,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL2A",Myself)  // Monster Summoning II
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2384,30 +2342,8 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_HORROR)  // SPWI205.SPL (Horror)
 	RandomNumGT(20,5)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself))  // Imoen's Belt
-	!Kit(LastSeenBy(Myself),CAVALIER)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_RESIST_FEAR)
-	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
-	!CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE4)
-	!CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2589,23 +2525,8 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 	RandomNumGT(20,5)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -2999,29 +2920,11 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_SKULL_TRAP)  // SPWI313.SPL (Skull Trap)
 	RandomNumGT(20,5)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
 	OR(2)
 		!Range(LastSeenBy(Myself),14)
 		StateCheck(Myself,STATE_MIRRORIMAGE)
-	!StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
-	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_ENERGY)
-	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
-	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3367,27 +3270,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3396,27 +3284,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL1F",Myself)  // Flame Arrow
 	RandomNumGT(20,10)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3431,21 +3304,7 @@ IF
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3795,27 +3654,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3824,27 +3668,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3853,27 +3682,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3882,27 +3696,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL77",Myself)  // Magic Missile
 	RandomNumGT(20,10)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3911,24 +3710,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL7S",Myself)  // Chain Lightning
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3937,24 +3721,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HasItem("SCRL2F",Myself)  // Cone of Cold
 	RandomNumGT(20,10)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -3963,24 +3732,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_AGANNAZAR_SCORCHER)  // SPWI217.SPL (Agannazar's Scorcher)
 	RandomNumGT(20,5)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -4259,29 +4013,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!StateCheck(LastSeenBy(Myself),STATE_BLIND)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -4290,34 +4027,12 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 	RandomNumGT(20,5)
 	OR(2)
 		RandomNumGT(20,10)
 		!HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself))  // Imoen's Belt
-	CheckStat(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
-	!CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE4)
-	!CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_RESIST_FEAR)
-	!Kit(LastSeenBy(Myself),CAVALIER)
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -4660,24 +4375,9 @@ THEN
 END
 
 IF
-	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 	RandomNumGT(20,5)
-	Allegiance(Myself,ENEMY)
-	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
-	!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	CheckStat(LastSeenBy(Myself),0,SANCTUARY)
-	!StateCheck(Myself,STATE_SILENCED)
-	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
-	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
