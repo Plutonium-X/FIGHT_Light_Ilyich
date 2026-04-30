@@ -30,7 +30,7 @@ END
 
 IF
 	Global("RZ_Ranged","LOCALS",0)
-	!HasItemEquiped("MELFMET",Myself)  // Melf's Minute Meteor
+	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!HasItemEquiped("AROW02",Myself)  // Arrow +1
 	!HasItemEquiped("AROW01",Myself)  // Arrow
 	!HasItemEquiped("DAGG16",Myself)  // Poisoned Throwing Dagger
