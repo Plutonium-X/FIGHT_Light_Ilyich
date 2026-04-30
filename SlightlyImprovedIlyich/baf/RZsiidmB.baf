@@ -1,8 +1,8 @@
 IF
 	OR(3)
-        !Allegiance(Myself,ENEMY)
-        !See(NearestEnemyOf(Myself))
-        Global("RZ_See_Enemy","LOCALS",0)
+		!Allegiance(Myself,ENEMY)
+		!See(NearestEnemyOf(Myself))
+		Global("RZ_See_Enemy","LOCALS",0)
 THEN
 	RESPONSE #100
 END
@@ -17,7 +17,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1I",Myself) // Hold Person
+	HasItem("SCRL1I",Myself)  // Hold Person
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -27,7 +27,7 @@ IF
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC])  // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Kit([PC],UNDEADHUNTER)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -45,7 +45,7 @@ IF
 		RandomNumGT(20,11)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC]))  // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Kit(SecondNearest([PC]),UNDEADHUNTER)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -63,7 +63,7 @@ IF
 		RandomNumGT(20,12)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC]))  // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Kit(ThirdNearest([PC]),UNDEADHUNTER)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -81,7 +81,7 @@ IF
 		RandomNumGT(20,13)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC]))  // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Kit(FourthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -99,7 +99,7 @@ IF
 		RandomNumGT(20,14)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC]))  // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Kit(FifthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -117,7 +117,7 @@ IF
 		RandomNumGT(20,15)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC]))  // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Kit(SixthNearest([PC]),UNDEADHUNTER)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -134,7 +134,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC])  // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Kit([PC],UNDEADHUNTER)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -151,7 +151,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC]))  // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Kit(SecondNearest([PC]),UNDEADHUNTER)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -168,7 +168,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC]))  // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Kit(ThirdNearest([PC]),UNDEADHUNTER)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -185,7 +185,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC]))  // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Kit(FourthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -202,7 +202,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC]))  // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Kit(FifthNearest([PC]),UNDEADHUNTER)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -219,7 +219,7 @@ IF
 	OR(16)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC]))  // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Kit(SixthNearest([PC]),UNDEADHUNTER)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -241,12 +241,12 @@ END
 
 IF
 	!GlobalTimerNotExpired("R_ZAction_Timer","LOCALS")
-	HasItem("SCRL1I",Myself) // Hold Person
+	HasItem("SCRL1I",Myself)  // Hold Person
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
+	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself))  // Imoen's Belt
 	!Kit(LastSeenBy(Myself),INQUISITOR)
 	!Kit(LastSeenBy(Myself),UNDEADHUNTER)
 	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
@@ -267,11 +267,11 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("SCRL1I",LastSeenBy(Myself)) // Hold Person
+		UseItem("SCRL1I",LastSeenBy(Myself))  // Hold Person
 END
 
 IF
-        See(Myself)
+	See(Myself)
 	False()
 THEN
 	RESPONSE #100
@@ -280,7 +280,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1P",Myself)
+	HasItem("SCRL1P",Myself)  // Skull Trap
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -534,7 +534,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1Q",Myself)
+	HasItem("SCRL1Q",Myself)  // Vampiric Touch
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
@@ -552,7 +552,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("SCRL1Q",LastSeenBy(Myself))
+		UseItem("SCRL1Q",LastSeenBy(Myself))  // Vampiric Touch
 END
 
 IF
@@ -565,11 +565,11 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1P",Myself)
+	HasItem("SCRL1P",Myself)  // Skull Trap
 	Allegiance(Myself,ENEMY)
 	OR(2)
-	     !Range(NearestEnemyOf(Myself),14)
-	     StateCheck(Myself,STATE_MIRRORIMAGE)
+		!Range(NearestEnemyOf(Myself),14)
+		StateCheck(Myself,STATE_MIRRORIMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
@@ -894,14 +894,14 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1P",Myself)
+	HasItem("SCRL1P",Myself)  // Skull Trap
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
 	OR(2)
-	     !Range(LastSeenBy(Myself),14)
-	     StateCheck(Myself,STATE_MIRRORIMAGE)
+		!Range(LastSeenBy(Myself),14)
+		StateCheck(Myself,STATE_MIRRORIMAGE)
 	!StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
 	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_ENERGY)
 	!CheckStat(LastSeenBy(Myself),1,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
@@ -918,7 +918,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("SCRL1P",LastSeenBy(Myself))
+		UseItem("SCRL1P",LastSeenBy(Myself))  // Skull Trap
 END
 
 IF
@@ -931,7 +931,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1F",Myself) // Flame Arrow
+	HasItem("SCRL1F",Myself)  // Flame Arrow
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -941,7 +941,7 @@ IF
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -953,7 +953,7 @@ IF
 		RandomNumGT(20,11)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -965,7 +965,7 @@ IF
 		RandomNumGT(20,12)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -977,7 +977,7 @@ IF
 		RandomNumGT(20,13)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -989,7 +989,7 @@ IF
 		RandomNumGT(20,14)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1001,7 +1001,7 @@ IF
 		RandomNumGT(20,15)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1012,7 +1012,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1023,7 +1023,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1034,7 +1034,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1045,7 +1045,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1056,7 +1056,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1067,7 +1067,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1079,7 +1079,7 @@ IF
 		RandomNumGT(20,10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1088,9 +1088,9 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1099,9 +1099,9 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1110,9 +1110,9 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1121,9 +1121,9 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1132,9 +1132,9 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1144,7 +1144,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1154,7 +1154,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1164,7 +1164,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1174,7 +1174,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1184,7 +1184,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1194,7 +1194,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),2,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1209,12 +1209,12 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1F",Myself) // Flame Arrow
+	HasItem("SCRL1F",Myself)  // Flame Arrow
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself)) // Cloak of Mirroring
+	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)
 	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1230,7 +1230,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("SCRL1F",LastSeenBy(Myself)) // Flame Arrow
+		UseItem("SCRL1F",LastSeenBy(Myself))  // Flame Arrow
 END
 
 IF
@@ -1244,8 +1244,8 @@ END
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
 	OR(2)
-		HasItem("SCRL1K",Myself)
-	     HaveSpell(WIZARD_CHROMATIC_ORB)
+		HasItem("SCRL1K",Myself)  // Lightning Bolt
+		HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1253,9 +1253,9 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(11)
 		RandomNumGT(20,10)
-        NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1265,9 +1265,9 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1277,9 +1277,9 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1289,9 +1289,9 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1301,9 +1301,9 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1313,9 +1313,9 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(11)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1326,7 +1326,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1337,7 +1337,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1348,7 +1348,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1359,7 +1359,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1370,7 +1370,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1381,7 +1381,7 @@ IF
 	OR(10)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1391,9 +1391,9 @@ IF
 		!CheckStat(SixthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,10)
-        NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1402,9 +1402,9 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1413,9 +1413,9 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1424,9 +1424,9 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1435,9 +1435,9 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1446,9 +1446,9 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1458,7 +1458,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		CheckStat([PC],6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat([PC],0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1468,7 +1468,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		CheckStat(SecondNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SecondNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1478,7 +1478,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		CheckStat(ThirdNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(ThirdNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1488,7 +1488,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FourthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FourthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1498,7 +1498,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(FifthNearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(FifthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1508,7 +1508,7 @@ IF
 	OR(9)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		CheckStat(Nearest([PC]),6,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
 		!CheckStat(SixthNearest([PC]),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1523,12 +1523,12 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_CHROMATIC_ORB)
+	HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
 	RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself)) // Cloak of Mirroring
+	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
 	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1542,17 +1542,17 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_CHROMATIC_ORB)
+		Spell(LastSeenBy(Myself),WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1K",Myself) // Flame Arrow
+	HasItem("SCRL1K",Myself)  // Lightning Bolt
 	RandomNumGT(20,15)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself)) // Cloak of Mirroring
+	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
 	CheckStat(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStat(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -1566,7 +1566,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("SCRL1K",LastSeenBy(Myself)) // Flame Arrow
+		UseItem("SCRL1K",LastSeenBy(Myself))  // Lightning Bolt
 END
 
 IF
@@ -1579,7 +1579,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
+	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1587,7 +1587,7 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(10)
 		RandomNumGT(20,10)
-        NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -1598,7 +1598,7 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1609,7 +1609,7 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1620,7 +1620,7 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1631,7 +1631,7 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1642,7 +1642,7 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(10)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1719,7 +1719,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
+	HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 	RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
@@ -1738,7 +1738,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_RAY_OF_ENFEEBLEMENT)
+		Spell(LastSeenBy(Myself),WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 END
 
 IF
@@ -1751,7 +1751,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_BLINDNESS)
+	HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1759,9 +1759,9 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(12)
 		RandomNumGT(20,10)
-        NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		StateCheck([PC],STATE_BLIND)
 		CheckStat([PC],5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -1772,9 +1772,9 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		StateCheck(SecondNearest([PC]),STATE_BLIND)
 		CheckStat(SecondNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1785,9 +1785,9 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		StateCheck(ThirdNearest([PC]),STATE_BLIND)
 		CheckStat(ThirdNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1798,9 +1798,9 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(FourthNearest([PC]),STATE_BLIND)
 		CheckStat(FourthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1811,9 +1811,9 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(FifthNearest([PC]),STATE_BLIND)
 		CheckStat(FifthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1824,9 +1824,9 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(12)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(SixthNearest([PC]),STATE_BLIND)
 		CheckStat(SixthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1838,7 +1838,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("CLCK26",[PC]) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",[PC])  // Cloak of Mirroring
 		StateCheck([PC],STATE_BLIND)
 		CheckStat([PC],5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat([PC],0,WIZARD_SPELL_DEFLECTION)
@@ -1850,7 +1850,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("CLCK26",SecondNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SecondNearest([PC]))  // Cloak of Mirroring
 		StateCheck(SecondNearest([PC]),STATE_BLIND)
 		CheckStat(SecondNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SecondNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1862,7 +1862,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("CLCK26",ThirdNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",ThirdNearest([PC]))  // Cloak of Mirroring
 		StateCheck(ThirdNearest([PC]),STATE_BLIND)
 		CheckStat(ThirdNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(ThirdNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1874,7 +1874,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("CLCK26",FourthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FourthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(FourthNearest([PC]),STATE_BLIND)
 		CheckStat(FourthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FourthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1886,7 +1886,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("CLCK26",FifthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",FifthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(FifthNearest([PC]),STATE_BLIND)
 		CheckStat(FifthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(FifthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1898,7 +1898,7 @@ IF
 	OR(11)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("CLCK26",SixthNearest([PC])) // Cloak of Mirroring
+		HasItemEquiped("CLCK26",SixthNearest([PC]))  // Cloak of Mirroring
 		StateCheck(SixthNearest([PC]),STATE_BLIND)
 		CheckStat(SixthNearest([PC]),5,WIZARD_SPELL_IMMUNITY)
 		!CheckStat(SixthNearest([PC]),0,WIZARD_SPELL_DEFLECTION)
@@ -1915,12 +1915,12 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_BLINDNESS)
+	HaveSpell(WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 	RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("CLCK26",LastSeenBy(Myself)) // Cloak of Mirroring
+	!HasItemEquiped("CLCK26",LastSeenBy(Myself))  // Cloak of Mirroring
 	!StateCheck(LastSeenBy(Myself),STATE_BLIND)
 	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
 	!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)
@@ -1936,7 +1936,7 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)
+		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
 IF
@@ -1949,7 +1949,7 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_CHARM_PERSON)
+	HaveSpell(WIZARD_CHARM_PERSON)  // SPWI104.SPL (Charm Person)
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1957,9 +1957,9 @@ IF
 	See(NearestEnemyOf(Myself))
 	OR(16)
 		RandomNumGT(20,10)
-        NumCreatureLT([PC],1)
+		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC])  // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Class([PC],MONK)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -1974,9 +1974,9 @@ IF
 		!CheckStat([PC],0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,11)
-        NumCreatureLT([PC],2)
+		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC]))  // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Class(SecondNearest([PC]),MONK)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -1991,9 +1991,9 @@ IF
 		!CheckStat(SecondNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,12)
-        NumCreatureLT([PC],3)
+		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC]))  // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Class(ThirdNearest([PC]),MONK)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2008,9 +2008,9 @@ IF
 		!CheckStat(ThirdNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,13)
-        NumCreatureLT([PC],4)
+		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC]))  // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Class(FourthNearest([PC]),MONK)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2025,9 +2025,9 @@ IF
 		!CheckStat(FourthNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,14)
-        NumCreatureLT([PC],5)
+		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC]))  // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Class(FifthNearest([PC]),MONK)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2042,9 +2042,9 @@ IF
 		!CheckStat(FifthNearest([PC]),0,MINORGLOBE)
 	OR(16)
 		RandomNumGT(20,15)
-        NumCreatureLT([PC],6)
+		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC]))  // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Class(SixthNearest([PC]),MONK)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2060,7 +2060,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		HasItemEquiped("IMOENHP1",[PC]) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",[PC])  // Imoen's Belt
 		Kit([PC],INQUISITOR)
 		Class([PC],MONK)
 		CheckStat([PC],4,WIZARD_SPELL_IMMUNITY)
@@ -2076,7 +2076,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],2)
 		!See(SecondNearest([PC]))
-		HasItemEquiped("IMOENHP1",SecondNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SecondNearest([PC]))  // Imoen's Belt
 		Kit(SecondNearest([PC]),INQUISITOR)
 		Class(SecondNearest([PC]),MONK)
 		CheckStat(SecondNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2092,7 +2092,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],3)
 		!See(ThirdNearest([PC]))
-		HasItemEquiped("IMOENHP1",ThirdNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",ThirdNearest([PC]))  // Imoen's Belt
 		Kit(ThirdNearest([PC]),INQUISITOR)
 		Class(ThirdNearest([PC]),MONK)
 		CheckStat(ThirdNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2108,7 +2108,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],4)
 		!See(FourthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FourthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FourthNearest([PC]))  // Imoen's Belt
 		Kit(FourthNearest([PC]),INQUISITOR)
 		Class(FourthNearest([PC]),MONK)
 		CheckStat(FourthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2124,7 +2124,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],5)
 		!See(FifthNearest([PC]))
-		HasItemEquiped("IMOENHP1",FifthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",FifthNearest([PC]))  // Imoen's Belt
 		Kit(FifthNearest([PC]),INQUISITOR)
 		Class(FifthNearest([PC]),MONK)
 		CheckStat(FifthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2140,7 +2140,7 @@ IF
 	OR(15)
 		NumCreatureLT([PC],6)
 		!See(SixthNearest([PC]))
-		HasItemEquiped("IMOENHP1",SixthNearest([PC])) // Imoen's Belt
+		HasItemEquiped("IMOENHP1",SixthNearest([PC]))  // Imoen's Belt
 		Kit(SixthNearest([PC]),INQUISITOR)
 		Class(SixthNearest([PC]),MONK)
 		CheckStat(SixthNearest([PC]),4,WIZARD_SPELL_IMMUNITY)
@@ -2161,12 +2161,12 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HaveSpell(WIZARD_CHARM_PERSON)
+	HaveSpell(WIZARD_CHARM_PERSON)  // SPWI104.SPL (Charm Person)
 	RandomNumGT(20,10)
 	Allegiance(Myself,ENEMY)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)
-	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself)) // Imoen's Belt
+	!HasItemEquiped("IMOENHP1",LastSeenBy(Myself))  // Imoen's Belt
 	!Kit(LastSeenBy(Myself),INQUISITOR)
 	!Class(LastSeenBy(Myself),MONK)
 	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
@@ -2186,5 +2186,5 @@ THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		Spell(LastSeenBy(Myself),WIZARD_CHARM_PERSON)
+		Spell(LastSeenBy(Myself),WIZARD_CHARM_PERSON)  // SPWI104.SPL (Charm Person)
 END
