@@ -280,11 +280,11 @@ END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("SCRL1P",Myself)  // Skull Trap
 	Allegiance(Myself,ENEMY)
 	!StateCheck(Myself,STATE_SILENCED)
 	CheckStat(Myself,0,CLERIC_INSECT_PLAGUE)
 	CheckStatLT(Myself,20,SPELLFAILUREMAGE)
+	HasItem("SCRL1Q",Myself)  // Vampiric Touch
 	See(NearestEnemyOf(Myself))
 	OR(10)
 		RandomNumGT(20,10)
