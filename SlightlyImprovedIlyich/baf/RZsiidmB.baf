@@ -3,6 +3,7 @@ IF
 		!Allegiance(Myself,ENEMY)
 		!See(NearestEnemyOf(Myself))
 		Global("RZ_See_Enemy","LOCALS",0)
+	!Name("IDEMON02",Myself)
 THEN
 	RESPONSE #100
 END
