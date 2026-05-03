@@ -493,7 +493,8 @@ END
 
 IF
 	Allegiance(Myself,ENEMY)
-	See(NearestEnemyOf(Myself))
+	NumCreatureGT([GOODCUTOFF],0)
+	RandomNumGT(20,10)
 	OR(8)
 		RandomNumGT(20,10)
 		NumCreatureLT([GOODCUTOFF],1)
@@ -822,7 +823,6 @@ IF
 		RandomNumGT(20,15)
 		DifficultyGT(EASY)
 	Allegiance(Myself,ENEMY)
-	RandomNumGT(20,10)
 	!CheckStat(Myself,4,SCRIPTINGSTATE4)
 	See(LastSeenBy(Myself))
 	Allegiance(LastSeenBy(Myself),PC)

@@ -17,7 +17,7 @@ END
 
 IF
 	Allegiance(Myself,ENEMY)
-	See(NearestEnemyOf(Myself))
+	NumCreatureGT([GOODCUTOFF],0)
 	OR(8)
 		RandomNumGT(20,5)
 		NumCreatureLT([GOODCUTOFF],1)
