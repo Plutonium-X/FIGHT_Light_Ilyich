@@ -205,7 +205,7 @@ IF
 	OR(5)
 		NumCreatureLT([PC],1)
 		!See([PC])
-		!CheckStat([PC],0,STONESKINS)
+		StateCheck([PC],0,STATE_DISABLED)
 		!CheckStat([PC],0,SANCTUARY)
 		!CheckStat([PC],0,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)
 	OR(5)
