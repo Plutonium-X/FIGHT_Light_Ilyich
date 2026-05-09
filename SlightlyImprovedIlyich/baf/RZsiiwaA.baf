@@ -217,7 +217,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		SetGlobalTimer("RZ_Enrage_Timer","LOCALS",EIGHTEEN_MINUTES)
+		SetGlobalTimer("RZ_Enrage_Timer","LOCALS",90)
 		SpellRES("SPCL321",Myself)  // Enrage
 END
 

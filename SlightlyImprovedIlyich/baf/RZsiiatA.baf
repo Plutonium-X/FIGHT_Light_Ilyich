@@ -19,6 +19,7 @@ END
 IF
 	Allegiance(Myself,ENEMY)
 	NumCreatureGT([GOODCUTOFF],0)
+	!RandomNum(21,6)
 	OR(8)
 		RandomNumGT(20,10)
 		NumCreatureLT([GOODCUTOFF],1)
@@ -345,7 +346,6 @@ IF
 	OR(2)
 		ActionListEmpty()
 		Global("RZ_Can_Melee","LOCALS",1)
-	!RandomNum(21,6)
 	OR(2)
 		Global("RZ_Can_Melee","LOCALS",1)
 		!StateCheck(Myself,STATE_INVISIBLE)
@@ -368,7 +368,6 @@ IF
 	OR(2)
 		ActionListEmpty()
 		Global("RZ_Can_Melee","LOCALS",1)
-	!RandomNum(21,6)
 	OR(2)
 		Global("RZ_Can_Melee","LOCALS",1)
 		!StateCheck(Myself,STATE_INVISIBLE)
