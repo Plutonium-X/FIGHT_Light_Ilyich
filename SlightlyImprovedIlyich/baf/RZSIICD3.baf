@@ -1,51 +1,41 @@
 IF
-  AreaCheck("AR0602")
+	AreaCheck("AR0602")  // Irenicus's Dungeon 1st Floor
 THEN
-    RESPONSE #100
-            Enemy()
-            ChangeAIScript("RZSIIGEN",OVERRIDE)
-            ChangeAIScript("RZSIIWAA",CLASS)
-            ChangeAIScript("RZSIIATA",RACE)
+	RESPONSE #100
+		Enemy()
+		ChangeAIScript("RZSIIGEN",OVERRIDE)
+		ChangeAIScript("RZSIIWAA",CLASS)
+		ChangeAIScript("RZSIIATA",RACE)
 END
 
 IF
-        Global("RZ_Rest","LOCALS",0)
-        OR(7)
-             Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	     Detect([PC])
-	     Detect([ALLY])
-	     Detect([CONTROLLED])
-             Detect([CHARMED])
-             Detect([FAMILIAR])
-             Detect(NearestEnemyOf(Myself))
- THEN
+	Global("RZ_Rest","LOCALS",0)
+	OR(2)
+		Detect([GOODCUTOFF])
+		Detect(NearestEnemyOf(Myself))
+THEN
 	RESPONSE #100
-	         SetGlobal("RZ_Rest","LOCALS",1)
-	         SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
+		SetGlobal("RZ_Rest","LOCALS",1)
+		SetGlobalTimer("RZ_Rest_Timer","LOCALS",2400)
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Rest_Timer","LOCALS")
-	!Detect([GOODCUTOFF.0.0.0.0.SUMMONED])
-	!Detect([PC])
-	!Detect([ALLY])
-	!Detect([CONTROLLED])
-        !Detect([CHARMED])
-        !Detect([FAMILIAR])
-        !Detect(NearestEnemyOf(Myself))
-        CombatCounter(0)
+	CombatCounter(0)
+	!Detect([GOODCUTOFF])
+	!Detect(NearestEnemyOf(Myself))
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Rest_Timer","LOCALS",3600)
 		SetGlobal("RZ_Rest","LOCALS",0)
-		ApplySpell(Myself,RESTORE_FULL_HEALTH)
+		ApplySpell(Myself,RESTORE_FULL_HEALTH)  // SPIN746.SPL (No such index)
 		Rest()
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	OR(18)
-                AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
+		AttackedBy([GOODCUTOFF.0.0.0.0.SUMMONED],DEFAULT)
 		AttackedBy([PC],DEFAULT)
 		AttackedBy([FAMILIAR],DEFAULT)
 		AttackedBy([ALLY],DEFAULT)
@@ -66,26 +56,26 @@ IF
 THEN
 	RESPONSE #100
 		Enemy()
-		DisplayStringHead(Myself,4939)
+		DisplayStringHead(Myself,4939)  // Me temper's bad enough without ye botherin' me.
 		ChangeAIScript("RZSIIWAA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	!Detect([ENEMY.0.0.THIEF_ALL])
 	See([PC])
 THEN
 	RESPONSE #100
 		Enemy()
-		DisplayStringHead(Myself,4939)
+		DisplayStringHead(Myself,4939)  // Me temper's bad enough without ye botherin' me.
 		ChangeAIScript("RZSIIWAA",OVERRIDE)
 		ChangeAIScript("RZSIIATA",CLASS)
 END
 
 IF
-        !Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,ENEMY)
 	!Detect([NEUTRAL.0.0.THIEF_ALL])
 	!Detect([ENEMY.0.0.THIEF_ALL])
 	!See([PC])
@@ -97,34 +87,34 @@ THEN
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
-  Detect([PC])
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Detect([PC])
 THEN
-    RESPONSE #100
-             SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
+	RESPONSE #100
+		SetGlobal("RZ_SII_Cutscene_3","MYAREA",1)
 END
 
 IF
-  Global("RZ_SII_Cutscene_3","MYAREA",0)
+	Global("RZ_SII_Cutscene_3","MYAREA",0)
 THEN
-    RESPONSE #100
+	RESPONSE #100
 END
 
 IF
 	!GlobalTimerNotExpired("RZ_Action_Timer","LOCALS")
-	HasItem("POTN08",Myself) // Potion of Healing
+	HasItem("POTN08",Myself)  // Potion of Healing
 	HPPercentLT(Myself,80)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("RZ_Action_Timer","LOCALS",6)
-		UseItem("POTN08",Myself) // Potion of Healing
+		UseItem("POTN08",Myself)  // Potion of Healing
 END
 
 IF
-        !RandomNum(21,6)
-        OR(2)
-	     See([NEUTRAL.0.0.THIEF_ALL])
-	     See([ENEMY.0.0.THIEF_ALL])
+	!RandomNum(21,6)
+	OR(2)
+		See([NEUTRAL.0.0.THIEF_ALL])
+		See([ENEMY.0.0.THIEF_ALL])
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()
@@ -137,6 +127,3 @@ THEN
 	RESPONSE #100
 		RandomWalk()
 END
-
-
-

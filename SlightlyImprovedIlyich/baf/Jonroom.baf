@@ -1,32 +1,33 @@
 IF
-	IsOverMe("Imoen")
+	IsOverMe("Imoen")  // Imoen
 	CombatCounter(0)
-	Global("RZ_SII_Jon_Room","AR0602",0)
+	Global("RZ_SII_Jon_Room","AR0602",0)  // Irenicus's Dungeon 1st Floor
 THEN
 	RESPONSE #100
-		SetGlobal("RZ_SII_Jon_Room","AR0602",1)
+		SetGlobal("RZ_SII_Jon_Room","AR0602",1)  // Irenicus's Dungeon 1st Floor
 		ActionOverride("Imoen",StartDialogueNoSet(Player1))
 END
 
 IF
 	IsOverMe([PC])
-	InParty("Imoen")
-	!Dead("Imoen") // Imoen
-	Range("Imoen",8)
-	Global("RZ_SII_Jon_Room","AR0602",0)
+	InParty("Imoen")  // Imoen
+	!Dead("Imoen")  // Imoen
+	Range("Imoen",8)  // Imoen
+	Global("RZ_SII_Jon_Room","AR0602",0)  // Irenicus's Dungeon 1st Floor
 THEN
 	RESPONSE #100
-		SetGlobal("RZ_SII_Jon_Room","AR0602",1)
+		SetGlobal("RZ_SII_Jon_Room","AR0602",1)  // Irenicus's Dungeon 1st Floor
 		ActionOverride("Imoen",StartDialogueNoSet(Player1))
 END
 
 IF
 	OR(2)
-	     IsOverMe([PC])
-             Entered([PC])
-	Global("RZ_SII_Jon_Room","AR0602",0)
+		IsOverMe([PC])
+		Entered([PC])
+	Global("RZ_SII_Jon_Room","AR0602",0)  // Irenicus's Dungeon 1st Floor
 THEN
 	RESPONSE #100
-	        SetGlobal("RZ_SII_Jon_Room","AR0602",2)
-		DisplayString(Myself,52077) // You suddenly have a sense of imminent danger.  Something here is not what it seems.
+		SetGlobal("RZ_SII_Jon_Room","AR0602",2)  // Irenicus's Dungeon 1st Floor
+		DisplayString(Myself,52077)  // You suddenly have a sense of imminent danger. Something here is not what it seems.
 END
+
